@@ -1,0 +1,35 @@
+.records-wrapper {
+  .no-records {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 0.506667rem;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+  .records-item {
+    box-sizing: border-box;
+    padding: 0.56rem 0.533333rem;
+    border-bottom: 1px solid #d8d8d8;
+    &:last-child {
+      border: none;
+    }
+    & > p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      font-size: 0.44rem;
+      color: #686868;
+      line-height: 0.533333rem;
+      margin-bottom: 0.133333rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      span {
+        font-weight: bold;
+        color: #333;
+      }
+    }
+  }
+}

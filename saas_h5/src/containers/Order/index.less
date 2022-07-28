@@ -1,0 +1,103 @@
+.order-wrapper{
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  background: #F2F3F5;
+  .arrow-right{
+    width: .2rem;
+    height: .333333rem;
+    vertical-align: middle;
+    margin-left: .306667rem;
+  }
+  .item{
+    padding:  0.4rem;
+    box-sizing: border-box;
+    width: 9.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    margin: 0.267rem auto;
+    border-radius: 0.2rem;
+    .logo{
+      width: 1.333rem;
+      height: 1.333rem;
+      margin-right: 0.267rem;
+    }
+    .info{
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      .left{
+        flex: 1;
+        p{
+          &.money{
+            height: 0.4rem;
+            font-size: 0.347rem;
+            font-weight: bold;
+          }
+          &.time{
+            color: #666666;
+            font-size: 0.32rem;
+            margin-top: 0.133rem;
+          }
+        }
+      }
+      .right{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        i{
+          font-size: 0.293rem;
+          color: #b4b4b4;
+          margin-left: 0.067rem;
+          margin-top: 0.107rem;
+        }
+        span{
+          font-size: 0.32rem;
+          font-weight: bold;
+          color: #94caff;
+          &.overdue{
+            color: #ec071b;
+          }
+          &.repay{
+            color: #F18D00;
+          }
+          &.success{
+            color: #25ff26;
+          }
+          &.rejected{
+            color: #666666;
+          }
+        }
+      }
+    }
+  }
+  .no-order{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #ffffff;
+    .con{
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      width: 4.493rem;
+      transform: translate(-50%,-50%);
+      img{
+        display: block;
+        width: 4.493rem;
+        height: 4rem;
+      }
+      p{
+        text-align: center;
+        color: #666666;
+        font-size: 0.373rem;
+        height: 0.453rem;
+        margin-top: 0.307rem;
+      }
+    }
+  }
+}

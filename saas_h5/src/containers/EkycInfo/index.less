@@ -1,0 +1,34 @@
+.ekyc-info-wrapper{
+  overflow: hidden;
+  min-height: 100%;
+  background: #F2F3F5;
+  .item-group{
+    box-sizing: border-box;
+    padding: 0 0.267rem;
+    width: 9.333rem;
+    background: #ffffff;
+    margin: 0.4rem auto;
+    .item{
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #F2F3F5;
+      &:last-child{
+        border: none;
+      }
+      .label,.value{
+        height: 1.467rem;
+        line-height: 1.467rem;
+        font-size: 0.4rem;
+      }
+      .opt{
+        flex: 2;
+      }
+      .value{
+        position: relative;
+        flex: 1;
+        margin-left: 0.133rem;
+        text-align: right;
+      }
+    }
+  }
+}

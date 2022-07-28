@@ -1,0 +1,100 @@
+.user-info-wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  background: #f2f3f5;
+  .user-info-bg {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 5.146667rem;
+    background: url("../../images/personalCenter/personal_center_bg.png")
+      no-repeat;
+    background-size: 100% 100%;
+    .user-info-title{
+      height: 1.333333rem;
+      line-height: 1.333333rem;
+      text-align: center;
+      color: #fff;
+      font-size: .506667rem;
+      font-weight: 500;
+      margin: 0;
+      margin-bottom: .84rem;
+    }
+    .user-info-con {
+      text-align: center;
+      .header-img{
+        width: 1.386667rem;
+        height: 1.386667rem;
+      }
+      .phone{
+        font-size: .413333rem;
+        color: #fff;
+        margin-top: .346667rem;
+      }
+    }
+  }
+  .menu-list-wrapper{
+    overflow: hidden;
+    width: 100%;
+    .menu-list{
+      &:first-child{
+        margin-top: 0;
+      }
+      .am-list{
+        .am-list-body{
+          &::after{
+            display: none;
+          }
+          .am-list-item{
+            box-sizing: border-box;
+            padding: 0 .36rem;
+            height: 1.666667rem;
+            margin: 0 auto;
+            &::after{
+              content: "";
+              position: absolute;
+              background-color: #D8D8D8;
+              top: auto;
+              right: auto;
+              left: 50%;
+              bottom: 0;
+              height: 1px;
+              width: 100%;
+              transform-origin: 50% 100%;
+              transform: scaleY(0.5) translateX(-50%);
+            }
+            &:last-child{
+              &::after{
+                display: none;
+              }
+            }
+            .am-list-thumb{
+              margin-right: .293333rem;
+              img{
+                width: .466667rem;
+                height: .466667rem;
+              }
+            }
+            .am-list-line{
+              padding: 0;
+              &::after{
+                content: "";
+                display: none;
+              }
+              .am-list-content{
+                color: #333;
+                font-size: .44rem;
+              }
+              .am-list-extra{
+                &>i{
+                  font-size: .306667rem;
+                  font-weight: bolder;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

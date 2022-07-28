@@ -1,0 +1,71 @@
+.select-modal{
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 80%;
+  background: #ffffff;
+  border-radius: 0.133rem;
+  margin: 0 auto;
+
+  h3{
+    box-sizing: border-box;
+    padding: 0 0.4rem;
+    margin: 0.533rem 0;
+    font-size: 0.427rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+  }
+
+  .list{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    .select-item{
+      box-sizing: border-box;
+      padding: 0 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      width: 100%;
+      min-height: 1.067rem;
+      border-bottom: 1px #d2d2d2 solid;
+      &:last-child{
+        border: none;
+      }
+      i{
+        font-size: 0.453rem;
+        font-weight: bold;
+        margin-right: 0.267rem;
+        &.icon-xuanzhong{
+          color: #FF7A00;
+        }
+        &.icon-xuanze1{
+          color: #E3E3E3;
+        }
+      }
+      span{
+        overflow: hidden;
+        flex: 1;
+        font-size: 0.48rem;
+        color: #000;
+        text-align: left;
+      }
+    }
+  }
+  .btn-wrapper{
+    background: #F2F3F5;
+    margin-top: 0.533rem;
+    .btn{
+      float: right;
+      padding: 0 0.267rem;
+      height: 1.453rem;
+      line-height: 1.453rem;
+      font-size: 0.453rem;
+      font-weight: bold;
+      color: #666666;
+      &.on{
+        color: #FF7A00;
+      }
+    }
+  }
+}

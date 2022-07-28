@@ -1,0 +1,46 @@
+.tax-bill-select-company-wrapper{
+  min-height: 100%;
+  ul{
+    box-sizing: border-box;
+    padding: 0 0.4rem;
+    li{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 1.467rem;
+      border-bottom: 1px solid #E0E0E0;
+      span{
+        position: relative;
+        font-size: 0.4rem;
+        flex: 1;
+        height: 1.467rem;
+        line-height: 1.467rem;
+        &:last-child{
+          text-align: right;
+        }
+      }
+      input{
+        font-size: 0.4rem;
+        height: 1.44rem;
+        line-height: 1.44rem;
+        margin-right: 0.2rem;
+      }
+    }
+  }
+  .loading-wrapper{
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #ffffff;
+    opacity: .5;
+    z-index: 9999;
+    img{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+}

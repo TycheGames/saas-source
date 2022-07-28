@@ -1,0 +1,59 @@
+.complatints-wrapper {
+  min-height: 100%;
+  .message-wrapper {
+    box-sizing: border-box;
+    padding-left: 0.32rem;
+    display: flex;
+    align-items: center;
+    background: #ffaf51;
+    color: #ffffff;
+    height: 0.8rem;
+    i {
+      font-size: 0.32rem;
+      font-weight: bold;
+      margin-right: 0.333rem;
+    }
+    p {
+      font-size: 0.28rem;
+      height: 0.8rem;
+      line-height: 0.8rem;
+    }
+  }
+  .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 0.026667rem 0.226667rem rgba(0, 0, 0, 0.22);
+    .tab-item {
+      position: relative;
+      flex: 1;
+      color: #333;
+      font-weight: bold;
+      font-size: 0.44rem;
+      height: 1.386667rem;
+      line-height: 1.386667rem;
+      text-align: center;
+      .line {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 2.453333rem;
+        height: 0.053333rem;
+        background: #ff1d1d;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  .fadeIn {
+    animation: fadeIn 0.3s linear forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

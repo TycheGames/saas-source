@@ -1,0 +1,34 @@
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.am-modal-transparent {
+  width: 100% !important;
+  .am-modal-content {
+    border-radius: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    .am-modal-body {
+      overflow: visible;
+      padding: 0 !important;
+    }
+  }
+}
+body {
+  background: #ffffff !important;
+}
+&.button-active {
+  position: relative;
+  user-select: none;
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+}

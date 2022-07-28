@@ -1,0 +1,220 @@
+.apply-loan-wrapper {
+  overflow: hidden;
+  background: #f2f3f5;
+  .list {
+    width: 9.066667rem;
+    background: #ffffff;
+    margin: 0.4rem auto;
+    .item {
+      box-sizing: border-box;
+      padding: 0 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 1.493rem;
+      background: #ffffff;
+      width: 8.4rem;
+      padding: 0;
+      border-bottom: 1px solid #e0e0e0;
+      margin: 0 auto;
+      &:last-child {
+        border: none;
+      }
+      & > span {
+        height: 1.493rem;
+        line-height: 1.493rem;
+        font-size: 0.4rem;
+        span {
+          display: inline-block;
+          width: 0.533rem;
+          height: 1.493rem;
+          line-height: 1.493rem;
+          text-align: center;
+          i {
+            font-size: 0.373rem;
+            vertical-align: middle;
+          }
+        }
+      }
+      .label {
+        color: #888888;
+      }
+
+      .arrow-right {
+        width: 0.2rem;
+        height: 0.333333rem;
+        vertical-align: middle;
+        margin-left: 0.306667rem;
+      }
+    }
+  }
+  .covid-pop-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(94, 94, 94, 0.596);
+    & > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      max-width: 8.266667rem;
+      height: auto;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .agreement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 8rem;
+    margin: 0.693rem auto 0;
+    .confirm-agr {
+      position: relative;
+      width: 0.853rem;
+      height: 0.853rem;
+      i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: #ff7a00;
+        font-size: 0.533rem;
+        font-weight: bold;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .agr-list {
+      flex: 1;
+      font-size: 0.373333rem;
+      line-height: 0.493rem;
+      a {
+        color: #ff7a00;
+      }
+    }
+  }
+  .apply-loan-icon {
+    display: block;
+    width: 2.746667rem;
+    height: 2.306667rem;
+    margin: 0.973333rem auto 0.56rem;
+  }
+  .msg {
+    width: 8.333333rem;
+    line-height: 0.613333rem;
+    text-align: center;
+    font-size: 0.44rem;
+    color: #333;
+    margin: 0 auto 0.56rem;
+  }
+  .select-bank-card {
+    padding: 0 0.346667rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 9.066667rem;
+    height: 1.533333rem;
+    background: #fff;
+    margin: 0.533333rem auto;
+    border-radius: 0.053333rem;
+    .label {
+      font-size: 0.413333rem;
+      color: #999;
+      line-height: 1.533333rem;
+    }
+    .select {
+      display: flex;
+      align-items: center;
+      font-size: 0.413333rem;
+      .info {
+        padding: 0.32rem 0;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .val {
+          font-size: 0.333333rem;
+          color: #333;
+          text-align: right;
+          &:first-child {
+            margin-bottom: 0.133333rem;
+          }
+        }
+      }
+      img {
+        width: 0.2rem;
+        height: 0.333333rem;
+        margin-left: 0.306667rem;
+      }
+    }
+  }
+  .next {
+    width: 9.44rem;
+    margin: 0.533333rem auto 0;
+  }
+}
+.repayment-modal {
+  background: #ffffff;
+  .title {
+    position: relative;
+    height: 1.28rem;
+    h1 {
+      height: 1.28rem;
+      line-height: 1.28rem;
+      font-size: 0.453rem;
+      font-weight: 500;
+      color: #000;
+      margin: 0;
+    }
+    .icon-wrapper {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1.147rem;
+      height: 1.28rem;
+      line-height: 1.28rem;
+      text-align: center;
+      i {
+        font-size: 0.387rem;
+        font-weight: bold;
+      }
+    }
+  }
+  ul {
+    padding-bottom: 0.4rem;
+    li {
+      width: 100%;
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        width: 8.4rem;
+        height: 1.067rem;
+        margin: 0 auto;
+      }
+      & > p {
+        width: 8.4rem;
+        line-height: 0.666667rem;
+        font-size: 0.373rem;
+        text-align: right;
+        margin: 0 auto;
+      }
+      &:first-child {
+        border-bottom: 0.013rem solid #e0e0e0;
+      }
+      span {
+        height: 1.067rem;
+        line-height: 1.067rem;
+        font-size: 0.373rem;
+        text-align: right;
+        &:first-child {
+          color: #888888;
+          text-align: left;
+        }
+        &:last-child {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

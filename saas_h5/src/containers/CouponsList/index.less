@@ -1,0 +1,89 @@
+.coupons-list-wrapper{
+  position: relative;
+  min-height: 100%;
+  .not-using-coupon{
+    width: 6.667rem;
+    height: 1.067rem;
+    line-height: 1.067rem;
+    text-align: center;
+    font-size: 0.507rem;
+    color: #ffffff;
+    background: #FF7A00;
+    border-radius: 0.533rem;
+    margin: 0.667rem auto;
+  }
+  .coupons-list{
+    box-sizing: border-box;
+    padding: 0 0.6rem;
+    min-height: 100%;
+    overflow: hidden;
+    .coupon-item{
+      margin: 0.4rem 0;
+      position: relative;
+      .info-wrapper{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        border-radius: 0.267rem;
+        background: #FF7A00;
+        .info{
+          box-sizing: border-box;
+          padding: 0.4rem 0.733rem;
+          .money{
+            font-size: 0.747rem;
+            height: 1.027rem;
+            line-height: 1.027rem;
+            margin: 0;
+          }
+          .coupon-name{
+            font-size: 0.507rem;
+            height: 0.693rem;
+            line-height: 0.693rem;
+          }
+        }
+        .time{
+          box-sizing: border-box;
+          padding-left: 0.733rem;
+          height: 0.773rem;
+          line-height: 0.773rem;
+          background: rgba(39, 39, 39, 0.10);
+          font-size: 0.32rem;
+        }
+      }
+      .select{
+        position: absolute;
+        width: 1.413rem;
+        height: 100%;
+        top: 0;
+        right: 0;
+        border-radius: 0 0.267rem 0.267rem 0;
+        background: rgba(255, 255, 255, 0.20);
+        img{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 0.587rem;
+          height: 0.587rem;
+          transform: translate(-50%,-50%);
+        }
+      }
+    }
+  }
+  .no-couponse{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    img{
+      width: 4.4rem;
+      height: 4.173rem;
+    }
+    p{
+      height: 0.48rem;
+      line-height: 0.48rem;
+      font-size: 0.453rem;
+      margin-top: 0.533rem;
+    }
+  }
+}
