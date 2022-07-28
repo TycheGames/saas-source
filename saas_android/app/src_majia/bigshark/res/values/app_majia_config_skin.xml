@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Big Shark</string>
+
+
+    <color name="theme_color">#FFF74545</color>
+    <color name="theme_secondary_color">#FFF74545</color>
+
+    <color name="main_fragment_shadow_start_theme_color">#66F74545</color>
+    <color name="main_fragment_shadow_end_theme_color">#30F74545</color>
+
+</resources>

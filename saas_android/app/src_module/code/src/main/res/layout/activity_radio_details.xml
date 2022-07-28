@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background_color">
+
+    <RelativeLayout
+        android:id="@+id/rl_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_titlebar_left_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/common_titbar_back_grey_icon"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/my_broadcast_center"
+            android:textColor="@color/color_3e3d3d"
+            android:textSize="19sp"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_titlebar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_radio_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_white_bg_corners_6"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_radiodetails_head"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/radiohall_listitem_head_portrait_icon"/>
+
+                    <TextView
+                        android:id="@+id/tv_radiodetails_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="sun flower"
+                        android:textColor="@color/color_666666"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_radiodetails_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/radiohall_listitem_gender_women_icon"/>
+
+                    <ImageView
+                        android:id="@+id/iv_radiodetails_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/radiohall_listitem_certified_icon"/>
+
+                    <TextView
+                        android:id="@+id/tv_radiodetails_creat_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="2019/03/04   08:42 publish"
+                        android:textColor="@color/color_9e9ea4"
+                        android:textSize="11sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_radiodetails_to_report"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="5dp"
+                        android:src="@mipmap/radiohall_listitem_report_icon"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/color_f2f2f2"/>
+
+                <TextView
+                    android:id="@+id/tv_radiodetails_theme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/eat_and_drink"
+                    android:textColor="@color/color_3e3d3d"
+                    android:textSize="17sp"/>
+
+                <TextView
+                    android:id="@+id/tv_radiodetails_appointment_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@mipmap/radiohall_listitem_appointment_time_textleft_icon"
+                    android:drawablePadding="5dp"
+                    android:text="04/29晚上"
+                    android:textColor="@color/color_3e3d3d"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_radiodetails_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@mipmap/radiohall_listitem_rendezvous_textleft_icon"
+                    android:drawablePadding="5dp"
+                    android:text="Shanghai"
+                    android:textColor="@color/color_3e3d3d"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tv_radiodetails_hope"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@mipmap/radiohall_listitem_dating_expectations_textleft_icon"
+                    android:drawablePadding="5dp"
+                    android:text="Dating Expectations: Look Face / Fun"
+                    android:textColor="@color/color_3e3d3d"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_radiodetails_supplement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@mipmap/radiohall_listitem_date_content_textleft_icon"/>
+
+                    <TextView
+                        android:id="@+id/tv_radiodetails_supplement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="10dp"
+                        android:text="@string/chat_and_eat"
+                        android:textColor="@color/color_9e9ea4"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview_radiodetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/color_f2f2f2"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_radiohall_item_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_radiohall_item_like_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/radiohall_listitem_ungivelike_icon"/>
+
+                        <TextView
+                            android:id="@+id/tv_radiohall_item_like_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="like"
+                            android:textColor="@color/color_666666"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_radiohall_item_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp">
+
+                        <ImageView
+                            android:id="@+id/iv_radiohall_item_comment_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/radiohall_listitem_no_comments_icon"/>
+
+                        <TextView
+                            android:id="@+id/tv_radiohall_item_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="remark"
+                            android:textColor="@color/color_666666"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_radiohall_item_check_registration"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/radiohall_listitem_check_registration_textleft_icon"/>
+
+                        <TextView
+                            android:id="@+id/tv_radiohall_item_myapply_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="View registration(6)"
+                            android:textColor="@color/color_161618"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_radiohall_item_apply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="15dp">
+
+                        <ImageView
+                            android:id="@+id/iv_radiohall_item_apply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/radiohall_listitem_apply_textleft_icon"/>
+
+                        <TextView
+                            android:id="@+id/tv_radiohall_item_apply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="I want to sign up(0)"
+                            android:textColor="@color/color_161618"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_praise_and_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/shape_white_bg_corners_6"
+                    android:orientation="vertical">
+
+                    <com.flyco.tablayout.SlidingTabLayout
+                        android:id="@+id/tab_layout_radio_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        app:tl_indicator_color="#FBDF18"
+                        app:tl_indicator_height="1dp"
+                        app:tl_indicator_width_equal_title="true"
+                        app:tl_textAllCaps="true"
+                        app:tl_textSelectColor="@color/color_666666"
+                        app:tl_textUnselectColor="@color/color_9e9ea4"
+                        app:tl_textsize="13sp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/theme_background_color"/>
+
+                    <com.bigshark.android.widget.MyViewPager
+                        android:id="@+id/vp_radio_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/include_my_input_box"/>
+
+        <LinearLayout
+            android:id="@+id/ll_input_box_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

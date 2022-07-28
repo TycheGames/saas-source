@@ -1,0 +1,407 @@
+apply plugin: 'com.android.application'
+apply plugin: 'bugly'
+apply from: 'build_majia.gradle'
+
+def AF_DEV_KEY = "3T9SvYXerEh6crKSyTCLQk"// appsflyer
+def UMENG_KEY = "5e169c06570df3210700014e"// 友盟统计key
+// df：每次上新包都要将包名通知到accuauth
+def DF_API_ID = "f1fbcfea504443fbb414eacdb3a98fa6"
+def DF_API_SECRET = "aa10167c44b7477fbec09838269396d6"
+// 同盾
+def TONGDUN_URL_TEST = "https://idfptest.tongdun.net"// 测试
+def TONGDUN_URL_OLINE = "https://idfp.tongdun.net"   // 线上
+
+
+def CURR_MAJIA = ext.majia_sass_ngp
+//def CURR_MAJIA = ext.majia_smallshark_gp
+
+// 所有的地址环境
+final String SERVICE_BASE_URL_DEV = "http://dev.loan.com"
+final String SERVICE_BASE_URL_DEV_LOCAL = "http://dev.loan.local"
+final String SERVICE_BASE_URL_TEST = "http://test-api.i-credit.in:8081"
+final String SERVICE_BASE_URL_TEST2 = "http://test2-api.i-credit.in:8081"
+final String SERVICE_BASE_URL_TEST3 = "http://test3-api.i-credit.in:8081"
+final String SERVICE_BASE_URL_TEST_SASS = "http://test-saas-api.i-credit.in:8081"
+
+
+// 开发环境
+def BASE_URLS_DEV = [SERVICE_BASE_URL_DEV, SERVICE_BASE_URL_DEV_LOCAL, SERVICE_BASE_URL_TEST, SERVICE_BASE_URL_TEST2, SERVICE_BASE_URL_TEST3, SERVICE_BASE_URL_TEST_SASS,]
+
+private static String assemblyBaseUrls(List<String> baseUrls) {
+    String assemblyStr = "{"
+    for (String baseUrl : baseUrls) {
+        assemblyStr += "\"${baseUrl}\","
+    }
+    assemblyStr += "}"
+    return assemblyStr
+}
+
+
+android {
+
+    repositories {
+        flatDir {
+            dirs = [
+                    './libs',
+                    './src_module/data_shuzilm/libs',
+                    '../Framework/libs',
+                    '../DFLivenessLibrary/libs',
+//                    '../DFKYCLibrary/libs',
+                    '../lib_data_shuzilm/libs',
+                    '../lib_permission_less/libs',
+                    '../lib_permission_more/libs',
+            ]
+        }
+    }
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    compileSdkVersion project.compileSdkVersion
+    buildToolsVersion project.buildToolsVersion
+
+    defaultConfig {
+        applicationId = CURR_MAJIA.manifestApplicationId // apk的包名 'com.jinchengindia.loans'
+        minSdkVersion project.minSdkVersion
+        targetSdkVersion project.targetSdkVersion
+        versionCode CURR_MAJIA.versionCode
+        versionName CURR_MAJIA.showVersionName
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi-v7a', 'arm64-v8a'//, 'x86', 'x86_64'
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        flavorDimensions "versionCode" // flavor dimension 表示它的维度就是该版本号，这样维度就是都是统一的了
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    android {
+        lintOptions { disable 'MissingTranslation', 'ExtraTranslation' }
+    }
+
+    sourceSets {
+        main {
+            def srcDirs = [
+                    "src_module/data_shuzilm/src/main/java",
+                    "src_module/code/src/main/java",
+                    'src/main/java',
+            ]
+            srcDirs.addAll(CURR_MAJIA.javaDir)
+            java.srcDirs = srcDirs
+
+//            manifest.srcFile 'src_permission/googleplay/AndroidManifest.xml'
+
+            res.srcDirs = [
+                    "src_module/data_shuzilm/src/main/res",
+                    "src_module/code/src/main/res",
+                    'src/main/res',
+                    CURR_MAJIA.resDir,
+            ]
+
+            assets.srcDirs = [
+                    "src_module/data_shuzilm/src/main/assets",
+                    "src_module/code/src/main/assets",
+                    'src/main/assets',
+                    CURR_MAJIA.assetsDir,
+            ]
+
+            jniLibs.srcDirs = [
+                    "src_module/data_shuzilm/src/main/jniLibs"
+            ]
+        }
+    }
+
+    dexOptions {
+        //最大堆内存
+        javaMaxHeapSize "8g"
+        //是否支持大工程模式
+        jumboMode = true
+        //预编译
+        preDexLibraries = true
+        //线程数
+        threadCount = 8
+    }
+    compileOptions {//使用JAVA8解析  invokedynamic requires --min-sdk-version >= 26
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //添加我们的签名文件配置
+    signingConfigs {
+        release {
+            storeFile file { CURR_MAJIA.storeFile }
+            storePassword CURR_MAJIA.storePassword
+            keyAlias CURR_MAJIA.keyAlias
+            keyPassword CURR_MAJIA.keyPassword
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+
+        debug {
+            storeFile file { CURR_MAJIA.storeFile }
+            storePassword CURR_MAJIA.storePassword
+            keyAlias CURR_MAJIA.keyAlias
+            keyPassword CURR_MAJIA.keyPassword
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            //混淆
+            minifyEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+
+            signingConfig signingConfigs.release
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard-rules-thridpart.pro',
+                    './src_module/data_shuzilm/proguard-rules.pro',
+                    '../lib_permission_more/proguard-rules.pro'
+            buildConfigField "String[]", "SELECT_BASE_URLS", assemblyBaseUrls(BASE_URLS_DEV)
+        }
+
+        release {
+            //混淆
+            minifyEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+
+            signingConfig signingConfigs.release
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard-rules-thridpart.pro',
+                    './src_module/data_shuzilm/proguard-rules.pro',
+                    '../lib_permission_more/proguard-rules.pro'
+            buildConfigField "String[]", "SELECT_BASE_URLS", assemblyBaseUrls([])
+        }
+    }
+
+    packagingOptions {
+        doNotStrip "*/armeabi/libdu.so"
+        doNotStrip "*/x86/libdu.so"
+    }
+
+
+    productFlavors {
+        if (CURR_MAJIA.isGooglePlayPackage) {
+            // 自己上传apk到应用市场，还需审核
+            google {}          // Google Play市场
+
+            // 从自有链接中下载包，再让渠道更新
+            nineapps {}        // 9apps
+        } else {
+            offical {}         // 官方
+
+            // 自己上传apk到应用市场，还需审核
+            vivo {}            // vivo
+
+            // 自有链接的下载
+            mobimagic {}       // cashbean--贷超包
+
+            // 从自有链接中下载包，再让渠道更新
+            transsion {}       // 传音
+            baice {}           // appjoy
+
+            // 使用自定义链接推广apk链接，链接加入了预转渠道
+            lendingadda {}     // lendingadda (链接名称：lendingadda apk)
+
+            // 使用自定义链接推广apk链接，非预转渠道
+            wa {}              // WhatsApp群控
+            sms {}             // 短信推广渠道
+        }
+//        oppo {}
+
+//        // 不收费的市场
+//        xiaomi {}
+//        huawei {}
+//        yamaxun {}
+    }
+
+    productFlavors.each { flavor ->
+        def AF_PRE_INSTALL_NAME = ""// appsflyer的多渠道(预装)配置
+        def AF_STORE = ""// appsflyer的第三应用商店
+        switch (flavor.name) {
+            case "nineapps": AF_PRE_INSTALL_NAME = "9apps_int"; break
+            case "vivo": AF_PRE_INSTALL_NAME = "vivoglobal_int"; break
+            case "transsion": AF_PRE_INSTALL_NAME = "shalltry_int"; break
+            case "mobimagic": AF_PRE_INSTALL_NAME = "360security_int"; break
+            case "baice": AF_PRE_INSTALL_NAME = "baice_int"; break
+            case "lendingadda": AF_PRE_INSTALL_NAME = ""; break
+            default: AF_PRE_INSTALL_NAME = ""; break
+        }
+
+        flavor.manifestPlaceholders = [
+                APP_SCHEME         : CURR_MAJIA.scheme, APP_HOST: CURR_MAJIA.host,
+                AF_PRE_INSTALL_NAME: AF_PRE_INSTALL_NAME,
+        ]
+
+        flavor.buildConfigField "String", "FILE_PROVIDER", "\"${CURR_MAJIA.manifestApplicationId}.fileprovider\"" // 文件提供者
+
+        flavor.buildConfigField "String[]", "NETWORK_URL_PRODUCT_LIST", assemblyBaseUrls(CURR_MAJIA.httpOnlineBaseUrls)
+        flavor.buildConfigField "String", "VERSION_NAME_SERVICE", "\"${CURR_MAJIA.innerVersionName}\""
+
+        flavor.buildConfigField "String", "HTTP_UA_UNIQUE_IDENTIFIER", "\"${CURR_MAJIA.httpPackageName}\""
+        flavor.buildConfigField "String", "PACKAGE_NAME", "\"${CURR_MAJIA.httpPackageName}\""// 渠道号前缀
+        flavor.buildConfigField "String", "APP_CHANNEL_NAME", "\"${flavor.name}\""// 渠道号，多渠道打包现在用这个参数
+        flavor.buildConfigField "String", "APP_FILE_TAG", "\"${CURR_MAJIA.httpPackageName}_${flavor.name}\""// 标记是哪个app文件
+
+        flavor.buildConfigField "String", "BUGLY_APP_ID", "\"${CURR_MAJIA.buglyAppId}\""
+
+        flavor.buildConfigField "String", "AF_DEV_KEY", "\"${AF_DEV_KEY}\""// appsflyer的key
+        flavor.buildConfigField "String", "AF_PRE_INSTALL_NAME", "\"${AF_PRE_INSTALL_NAME}\""// appsflyer的预装配置
+        flavor.buildConfigField "String", "AF_STORE", "\"${AF_STORE}\""// appsflyer的第三应用商店
+
+//        flavor.buildConfigField "String", "DF_API_ID", "\"${DF_API_ID}\""// df
+//        flavor.buildConfigField "String", "DF_API_SECRET", "\"${DF_API_SECRET}\""// df
+
+//        flavor.buildConfigField "boolean", "IS_MORE", "${!CURR_MAJIA.isGooglePlayPackage}"// 是否需要更多权限
+
+        flavor.buildConfigField "String", "SHUZILIANMENG_APIKEY", "\"${CURR_MAJIA.dataShuzilmApikey}\""
+        flavor.buildConfigField "String", "UMENG_KEY", "\"${UMENG_KEY}\""// 友盟的key
+    }
+
+    /**
+     * Gradle3.3 之前的方法
+     */
+//    android.applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def outputFile = output.outputFile
+//            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+//                def packagename = CURR_MAJIA.fileName
+//                def channel = variant.productFlavors[0].name
+//                def fileName = packagename + "_" + channel + ".apk"
+//                output.outputFile = new File(outputFile.parent, fileName)
+//            }
+//        }
+//    }
+
+    /**
+     * Gradle3.3 以上的方法
+     * 多个包一起打包时，忽略同时生成的output.json被覆盖的问题
+     */
+    applicationVariants.all { variant ->
+//        if (variant.buildType.name == "debug") {
+////            apkOutputDirectory = new File(project.rootDir.absolutePath + "/apk_debug")
+//            variant.getPackageApplicationProvider().get().outputDirectory = new File(project.buildDir.absolutePath + "/outputs/apk/debug")
+//        } else
+        if (variant.buildType.name == 'release') {
+//            apkOutputDirectory = new File(project.rootDir.absolutePath + "/apk")
+            variant.getPackageApplicationProvider().get().outputDirectory = new File(project.buildDir.absolutePath + "/outputs/apk/release")
+        }
+
+        variant.getPackageApplicationProvider().get().outputScope.apkDatas.forEach { apkData ->
+//          def packagename = (project.name != "app") ? project.name : rootProject.name
+            def packagename = CURR_MAJIA.fileName
+//          def channel = variant.productFlavors[0].name
+            def channel = variant.flavorName
+            def versionName = variant.versionName //  apk version
+            def buildType = variant.buildType.name //  debug || release
+
+            def apkFileName = packagename + "_" + channel + ".apk"
+            apkData.outputFileName = apkFileName
+        }
+    }
+
+}
+
+afterEvaluate {
+    // copy文件：switchToGoogleServices
+    copy {
+        println("Switches to ${CURR_MAJIA.rootDir}/google-services.json")
+        description = "Switches to ${CURR_MAJIA.rootDir}/google-services.json"
+        from CURR_MAJIA.rootDir
+        include "google-services.json"
+        into "."
+    }
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude group: 'com.google.code.findbugs'
+    })
+
+//    implementation 'com.jakewharton:butterknife:8.4.0'                        // butterKnife注解
+//    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    implementation 'com.jakewharton:butterknife:9.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0'
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':Framework')
+
+    // ***************** 图片 *****************
+    // 图片压缩：https://github.com/nanchen2251/CompressHelper
+    implementation 'com.github.nanchen2251:CompressHelper:1.0.5'
+//    // 高效、简洁的图片压缩工具库 https://github.com/shaohui10086/AdvancedLuban
+//    implementation 'me.shaohui.advancedluban:library:1.3.5'
+
+
+    // ***************** ui *****************
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-31'// 加载刷新库
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-31'// 下拉刷新样式
+//    implementation 'com.github.Bakumon:StatusLayoutManager:1.0.4'           // 网络状态管理
+//    implementation 'com.xhb:xbanner:1.5.1'                                  // banner
+    implementation "me.leolin:ShortcutBadger:1.1.22@aar"                      // 桌面图标消息红点
+    implementation 'io.github.meetsl:SCardView:1.1'                    // 阴影view
+
+    //谷歌
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.google.firebase:firebase-messaging:17.6.0'
+
+    // ***************** 统计 *****************
+    //facebook 埋点
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+    implementation 'com.google.android.gms:play-services-gcm:9.4.0'
+    //appsflyer
+    implementation 'com.appsflyer:af-android-sdk:4.10.2'
+    implementation 'com.android.installreferrer:installreferrer:1.0'
+
+    // ***************** 数据上报：权限数量 *****************
+    if (CURR_MAJIA.isGooglePlayPackage) {
+        implementation project(':lib_permission_less')                        // 权限少的
+    } else {
+        implementation project(':lib_permission_more')                        // 权限多的
+    }
+
+    implementation project(":${CURR_MAJIA.webviewModule}")                    // webview
+
+    // ***************** 第三方数据 *****************
+//    implementation project(':lib_data_shuzilm')                               // 数盟 V5.9.12 2019-09-18
+    implementation files('src_module/data_shuzilm/libs/du.jar')
+    // 数盟 V5.9.12 2019-09-18
+    // ***************** 认证 *****************
+    implementation project(':DFLivenessLibrary')                              // accuauth 活体认证
+//    implementation project(':DFKYCLibrary')
+    // accuauth ekyc认证 v1.0.1 2019-09-17
+
+    implementation(name: 'truesdk-0.7-releasePartner', ext: 'aar')            // truecaller 登录
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.7.0'
+    implementation 'com.tencent:mmkv:1.0.18'
+
+//    // 图片信息
+//    implementation 'it.sephiroth.android.exif:library:1.0.1'
+
+
+    // 新code的依赖
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    // 状态栏 基础依赖包
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0-beta01'
+//    // 状态栏 快速实现
+//    implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0-beta01'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+//    implementation 'org.greenrobot:eventbus:3.1.1'
+//    implementation 'com.dinuscxj:circleprogressbar:1.3.0'
+    implementation  'com.umeng.umsdk:analytics:8.0.0'
+    implementation  'com.umeng.umsdk:common:2.0.0'
+
+}
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_signup_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_common_white"
+    tools:context="com.bigshark.android.activities.mine.RegisterActivity">
+
+    <com.bigshark.android.core.component.navigator.NavigationStatusLinearLayout
+        android:id="@+id/common_navigation_status_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:defult_style="NO_TITLE_BLCAK"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_signup_back"
+        android:layout_width="@dimen/user_signup_back_width"
+        android:layout_height="@dimen/user_signup_back_height"
+        android:layout_marginStart="@dimen/user_signup_back_margin_start"
+        android:layout_marginTop="@dimen/user_signup_back_margin_top"
+        android:src="@drawable/application_user_enter_back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/common_navigation_status_view" />
+
+    <TextView
+        android:id="@+id/register_page_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/register_page_text_margin_start"
+        android:text="@string/register_text"
+        android:textColor="@color/color_common_text_tip"
+        android:textSize="@dimen/register_page_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_signup_back" />
+
+    <LinearLayout
+        android:id="@+id/register_page_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/reset_password_phone_layout_height"
+        android:layout_marginStart="@dimen/reset_password_phone_margin_start"
+        android:layout_marginTop="@dimen/reset_password_phone_margin_start"
+        android:layout_marginEnd="@dimen/reset_password_phone_margin_start"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_page_text">
+
+        <EditText
+            android:id="@+id/user_signup_pass_edit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_reset_password_edit_height"
+            android:layout_weight="1"
+            android:background="@color/color_common_white"
+            android:hint="@string/input_password_tip"
+            android:inputType="textPassword"
+            android:textColor="@color/color_common_text_tip"
+            android:textColorHint="@color/color_common_text"
+            android:textSize="@dimen/user_reset_password_edit_size" />
+
+        <ImageView
+            android:id="@+id/user_signup_pwd_look_image"
+            android:layout_width="@dimen/user_reset_password_password_look_image_size"
+            android:layout_height="@dimen/user_reset_password_password_look_image_size"
+            android:layout_marginStart="@dimen/user_reset_password_password_look_image_margin"
+            android:layout_marginEnd="@dimen/user_reset_password_password_look_image_margin"
+            android:src="@drawable/mine_password_edit_hide" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/register_page_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_line_height"
+        android:layout_marginStart="@dimen/reset_password_phone_margin_start"
+        android:layout_marginEnd="@dimen/reset_password_phone_margin_start"
+        android:background="@color/color_common_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_page_input_layout" />
+
+    <LinearLayout
+        android:id="@+id/register_page_confirm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/reset_password_phone_layout_height"
+        android:layout_marginStart="@dimen/reset_password_phone_margin_start"
+        android:layout_marginEnd="@dimen/reset_password_phone_margin_start"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_page_view">
+
+        <EditText
+            android:id="@+id/user_signup_verify_pass_edit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_reset_password_edit_height"
+            android:layout_weight="1"
+            android:background="@color/color_common_white"
+            android:hint="@string/signup_please_input_verify_password"
+            android:inputType="textPassword"
+            android:textColor="@color/color_common_text_tip"
+            android:textColorHint="@color/color_common_text"
+            android:textSize="@dimen/user_reset_password_edit_size" />
+
+        <ImageView
+            android:id="@+id/user_signup_verify_pwd_look_image"
+            android:layout_width="@dimen/user_reset_password_password_look_image_size"
+            android:layout_height="@dimen/user_reset_password_password_look_image_size"
+            android:layout_marginStart="@dimen/user_reset_password_password_look_image_margin"
+            android:layout_marginEnd="@dimen/user_reset_password_password_look_image_margin"
+            android:src="@drawable/mine_password_edit_hide" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/register_page_view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_line_height"
+        android:layout_marginStart="@dimen/reset_password_phone_margin_start"
+        android:layout_marginEnd="@dimen/reset_password_phone_margin_start"
+        android:background="@color/color_common_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_page_confirm_layout" />
+
+    <LinearLayout
+        android:id="@+id/register_page_otp_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/reset_password_phone_layout_height"
+        android:layout_marginStart="@dimen/reset_password_phone_margin_start"
+        android:layout_marginEnd="@dimen/reset_password_phone_margin_start"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_page_view1">
+
+        <EditText
+            android:id="@+id/user_signup_otp_code_edit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_signup_otp_code_edit_height"
+            android:layout_weight="1"
+            android:background="@color/color_common_white"
+            android:hint="@string/otp_code"
+            android:imeOptions="actionGo"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/color_common_text_tip"
+            android:textColorHint="@color/color_common_text"
+            android:textSize="@dimen/user_reset_password_edit_size" />
+
+        <TextView
+            android:id="@+id/user_signup_otp_code_send_text"
+            android:layout_width="@dimen/user_signup_otp_code_send_text_width"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/send_otp"
+            android:textColor="@color/theme_secondary_color"
+            android:textSize="@dimen/user_signup_otp_code_send_text_size" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/register_page_view2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_line_height"
+        android:layout_marginStart="@dimen/reset_password_phone_margin_start"
+        android:layout_marginEnd="@dimen/reset_password_phone_margin_start"
+        android:layout_marginBottom="@dimen/register_page_view2_margin_bottom"
+        android:background="@color/color_common_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_page_otp_layout" />
+
+    <TextView
+        android:id="@+id/user_signup_signup_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/user_signup_signup_text_height"
+        android:layout_marginStart="@dimen/reset_password_phone_margin_start"
+        android:layout_marginEnd="@dimen/reset_password_phone_margin_start"
+        android:layout_marginTop="@dimen/user_signup_signup_text_margin_top"
+        android:background="@drawable/shape_global_button_theme"
+        android:gravity="center"
+        android:text="@string/register_upper_case"
+        android:textColor="@color/white"
+        android:textSize="@dimen/user_signup_signup_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_page_view2" />
+
+    <TextView
+        android:id="@+id/user_signup_agreement_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/reset_password_phone_margin_start"
+        android:layout_marginEnd="@dimen/reset_password_phone_margin_start"
+        android:layout_marginTop="@dimen/user_signup_signup_text_margin_top"
+        android:lineSpacingExtra="@dimen/input_phone_agreementtext_space"
+        android:text="@string/login_tip"
+        android:textColor="@color/color_common_text"
+        android:textSize="@dimen/user_signup_agreement_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_signup_signup_text" />
+
+</android.support.constraint.ConstraintLayout>

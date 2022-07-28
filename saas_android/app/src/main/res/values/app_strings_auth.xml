@@ -1,0 +1,48 @@
+<resources>
+    <!-- 认证 -->
+
+    <string name="common_button_camera">Camera</string>
+    <string name="common_button_gallery">Gallery</string>
+
+
+    <!-- ===== OCR center ===== -->
+    <!-- 必须先做Aadhaar认证 -->
+    <string name="ocrcenter_please_auth_aadhaar">Please authenticate Aadhaar first!</string>
+    <!-- 必须先做Aadhaar与pan卡认证 -->
+    <string name="ocrcenter_please_auth_aadhaar_and_pan">Please authenticate Aadhaar and Pan first!</string>
+    <!-- 必须刷新页面以获取人脸识别的依赖数据 -->
+    <string name="ocrcenter_please_auth_refresh_page">Please refresh the display to get face recognition data</string>
+    <string name="ocrcenter_please_again_ocr_aadhaar_and_pan">Aadhaar and Pan do not meet the requirements, please re-authenticate</string>
+    <string name="ocrcenter_please_again_ocr_aadhaar">Aadhaar does not meet the requirements, please re-authenticate</string>
+    <string name="ocrcenter_please_again_ocr_pan">Pan does not meet the requirements, please re-authenticate</string>
+
+    <!-- ===== pan卡认证 ===== -->
+    <string name="auth_pancard_Please_enter_a_PAN_Card_Number">Please enter a PAN Card Number</string>
+    <string name="auth_pancard_Please_enter_your_father_name">Please enter your father name</string>
+    <string name="auth_pancard_uploadPanCard_title">Pan card photo</string>
+    <string name="auth_pancard_uploadPanCard_message">Please choose a way to get a pan card photo</string>
+
+
+    <!-- ===== 人脸识别认证 ===== -->
+    <string name="auth_face_permission_denied_tip">Please enable Read External Storage、Camera permissions</string>
+    <string name="auth_liveness_failed_tip_message">The photo is not clear, please try again</string>
+
+
+    <!-- ===== aadhaar ocr 认证 ===== -->
+    <string name="auth_aadhaar_ocr_title">Aadhaar Card Photo</string>
+    <string name="auth_aadhaar_ocr_message">Please choose a way to get a Aadhaar Card Photo</string>
+
+    <!-- ===== aadhaar select 认证 ===== -->
+    <string name="auth_aadhaar_select_dialog_message">Please choose a way to Aadhaar verification</string>
+    <string name="auth_aadhaar_select_dialog_btn_scan">Aadhaar Scan</string>
+    <string name="auth_aadhaar_select_dialog_btn_otp">OTP</string>
+
+    <string name="auth_kyc_tip_pan">Please do pan card verification</string>
+    <string name="auth_kyc_tip_liveness">Please do selfie verification</string>
+    <string name="auth_address_tip_aadhaar">Please do aadhaar card verification</string>
+
+
+    <!-- ===== 拍照需要的权限 ===== -->
+    <string name="common_takePhoto_permission_denied_tip">Please enable Read Read External Storage、Camera permissions</string>
+</resources>
+

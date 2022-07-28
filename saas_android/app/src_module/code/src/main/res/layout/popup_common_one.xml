@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/shape_white_bg_corners_6"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:id="@+id/tv_popup_one_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="提示"
+            android:textColor="@color/color_3e3d3d"
+            android:textSize="17sp"/>
+
+        <ImageView
+            android:id="@+id/iv_popup_one_close"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/popup_topright_close_icon"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_popup_one_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:text="Are you sure dating sun flower？"
+        android:textColor="@color/color_3e3d3d"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_popup_one_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_popup_confirm_btn_bg"
+        android:gravity="center"
+        android:text="Is Ta"
+        android:textColor="#232021"
+        android:textSize="15sp"/>
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".upgrade.UpgradeAppDialog">
+
+    <RelativeLayout
+        android:id="@+id/common_upgrade_app_root"
+        android:layout_width="323dp"
+        android:layout_height="319dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="111dp"
+        android:background="@drawable/app_upgrade_app_bg">
+
+        <TextView
+            android:id="@+id/common_upgrade_app_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Upgrade Prompt"
+            android:textColor="#FF333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/common_upgrade_app_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/common_upgrade_app_title"
+            android:layout_marginBottom="62dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="message"
+            android:textColor="#FF666666"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/common_upgrade_app_forcedupdate"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@color/theme_color"
+            android:gravity="center"
+            android:text="Update"
+            android:textColor="#FF333333"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/common_upgrade_app_cancel"
+            android:layout_width="148dp"
+            android:layout_height="31dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/shape_upgrade_app_cancel"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/theme_secondary_color"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/common_upgrade_app_update"
+            android:layout_width="148dp"
+            android:layout_height="31dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/theme_color"
+            android:gravity="center"
+            android:text="Update"
+            android:textColor="#FF333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>

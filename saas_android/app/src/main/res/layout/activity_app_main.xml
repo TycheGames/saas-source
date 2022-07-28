@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bigshark.android.activities.home.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/app_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#80E0E0E0" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/app_main_tab"
+        style="@style/MainTabStyle"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@android:color/white" />
+
+</LinearLayout>

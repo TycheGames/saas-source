@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:radius="40dp" />
+    <gradient
+        android:endColor="@color/kyc_aadhaar_card_bg_end"
+        android:startColor="@color/kyc_aadhaar_card_bg_start" />
+</shape>

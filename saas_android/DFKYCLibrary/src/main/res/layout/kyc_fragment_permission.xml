@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kyc_text_white"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/id_aadhaar_title"
+        style="@style/KYCBoldTitleStyle"
+        android:layout_marginTop="112dp"
+        android:gravity="center"
+        android:text="@string/kyc_adahaar_number_title" />
+
+    <TextView
+        android:id="@+id/id_aadhaar_content"
+        style="@style/KYCContentStyle"
+        android:layout_below="@+id/id_aadhaar_title"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/kyc_adahaar_number_content" />
+
+    <TextView
+        android:id="@+id/id_tv_permission_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_aadhaar_content"
+        android:layout_marginLeft="67dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="33dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/kyc_permission_content"
+        android:textColor="@color/kyc_text_black"
+        android:textSize="@dimen/kyc_text_default_size" />
+
+    <TextView
+        android:id="@+id/id_btn_yes"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/id_tv_permission_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/kyc_request_permission_yes_bg"
+        android:gravity="center"
+        android:text="@string/kyc_permission_yes"
+        android:textColor="@color/kyc_text_white"
+        android:textSize="@dimen/kyc_text_small_size" />
+
+    <TextView
+        android:id="@+id/id_btn_no"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/id_btn_yes"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/kyc_request_permission_no_bg"
+        android:gravity="center"
+        android:text="@string/kyc_permission_no"
+        android:textColor="@color/kyc_text_white"
+        android:textSize="@dimen/kyc_text_small_size" />
+
+</RelativeLayout>

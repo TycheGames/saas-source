@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_method_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/method_payment_balance_check_icon"/>
+
+    <TextView
+        android:id="@+id/tv_method_method_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:text="@string/alipay"
+        android:textColor="@color/color_666666"
+        android:textSize="15sp"/>
+
+    <CheckBox
+        android:clickable="false"
+        android:id="@+id/cb_method"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:button="@drawable/selector_checkbox_payment_method"/>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contact_activity_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_authenticate_contact_bg"
+    tools:context="com.bigshark.android.activities.authenticate.EmergencyContactActivity">
+
+    <com.bigshark.android.core.component.navigator.NavigationStatusLinearLayout
+        android:id="@+id/authenticate_emergency_contact_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_common_white"
+        app:defult_style="NO_TITLE_BLCAK" />
+
+    <LinearLayout
+        android:id="@+id/authenticate_emergency_contact_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/authenticate_emergency_contact_title"
+        android:background="@color/color_common_white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/authenticate_contact_back_icon"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/nav_back_black_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="48dp"
+            android:gravity="center"
+            android:text="@string/contact_title"
+            android:textColor="@color/color_authenticate_contact_title"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/authenticate_emergency_contact_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/authenticate_emergency_contact_layout"
+        android:background="@color/color_authenticate_tip_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="10dp"
+        android:text="@string/contact_text"
+        android:textColor="@color/color_common_white"
+        android:textSize="13sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/authenticate_emergency_contact_text">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/activity_contact_input_root_layout" />
+
+            <include layout="@layout/activity_contact_optional_root_layout" />
+
+            <TextView
+                android:id="@+id/authenticate_contact_submit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/selector_global_button"
+                android:gravity="center"
+                android:text="@string/continue_text"
+                android:textColor="@color/common_btn_textcolor_selector"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

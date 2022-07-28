@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/input_phone_activity_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_common_white"
+    tools:context="com.bigshark.android.activities.mine.UserEnterActivity">
+
+    <com.bigshark.android.core.component.navigator.NavigationStatusLinearLayout
+        android:id="@+id/common_navigation_status_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:defult_style="NO_TITLE_BLCAK"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/user_input_phone_back"
+        android:layout_width="@dimen/input_phone_back_width"
+        android:layout_height="@dimen/input_phone_back_height"
+        android:paddingStart="@dimen/input_phone_back_padding_start"
+        android:paddingTop="@dimen/input_phone_back_padding_top"
+        android:paddingEnd="@dimen/input_phone_back_padding_start"
+        android:paddingBottom="@dimen/input_phone_back_padding_top"
+        android:src="@drawable/application_user_enter_back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/common_navigation_status_view" />
+
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="@dimen/input_phone_app_logo_width"
+        android:layout_height="@dimen/input_phone_app_logo_height"
+        android:layout_marginTop="@dimen/input_phone_app_logo_margin_top"
+        android:src="@drawable/application_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_input_phone_back" />
+
+
+    <TextView
+        android:id="@+id/input_phone_activity_phone_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/input_phone_tip_margin_start"
+        android:layout_marginTop="@dimen/input_phone_tip_margin_top"
+        android:layout_marginEnd="@dimen/input_phone_tip_margin_start"
+        android:layout_marginBottom="@dimen/input_phone_tip_margin_bottom"
+        android:text="@string/phone_area_code"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_logo" />
+
+    <EditText
+        android:id="@+id/personal_enter_input_phone_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/input_phone_edit_margin_start"
+        android:layout_marginTop="@dimen/input_phone_edit_margin_top"
+        android:layout_marginEnd="@dimen/input_phone_edit_margin_end"
+        android:layout_marginBottom="@dimen/input_phone_edit_margin_bottom"
+        android:background="@color/color_common_white"
+        android:digits="1234567890"
+        android:hint="@string/phone_num_tip"
+        android:imeOptions="actionGo"
+        android:inputType="phone"
+        android:textColor="@color/color_common_text_tip"
+        android:textColorHint="@color/color_common_text"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/input_phone_activity_phone_tip"
+        app:layout_constraintTop_toBottomOf="@id/app_logo" />
+
+    <View
+        android:id="@+id/mobile_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_line_width"
+        android:layout_marginStart="@dimen/view_line_margin_start"
+        android:layout_marginTop="@dimen/view_line_margin_top"
+        android:layout_marginEnd="@dimen/view_line_margin_start"
+        android:layout_marginBottom="@dimen/view_line_margin_bottom"
+        android:background="@color/color_common_line"
+        app:layout_constraintTop_toBottomOf="@id/personal_enter_input_phone_edit" />
+
+    <TextView
+        android:id="@+id/user_input_phone_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_phone_next_height"
+        android:layout_marginStart="@dimen/input_phone_next_margin_start"
+        android:layout_marginTop="@dimen/input_phone_next_margin_top"
+        android:layout_marginEnd="@dimen/input_phone_next_margin_start"
+        android:background="@drawable/shape_global_button_theme"
+        android:gravity="center"
+        android:text="@string/next_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/input_phone_next_text_size"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mobile_line" />
+
+    <TextView
+        android:id="@+id/input_phone_activity_agreementText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/input_phone_agreementtext_margin_start"
+        android:layout_marginTop="@dimen/input_phone_agreementtext_margin_top"
+        android:layout_marginEnd="@dimen/input_phone_agreementtext_margin_start"
+        android:lineSpacingExtra="@dimen/input_phone_agreementtext_space"
+        android:text="@string/enter_tip"
+        android:textColor="#888888"
+        android:textSize="@dimen/input_phone_agreementtext_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_input_phone_next" />
+
+    <include layout="@layout/activity_input_phone_activity_truecallser_root_layout" />
+
+</android.support.constraint.ConstraintLayout>

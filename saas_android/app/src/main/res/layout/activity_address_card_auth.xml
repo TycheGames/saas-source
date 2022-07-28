@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authenticate_address_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEEEEEE"
+    tools:context="com.bigshark.android.activities.authenticate.AddressCardAuthActivity">
+
+    <com.bigshark.android.core.component.navigator.NavigationStatusLinearLayout
+        android:id="@+id/authenticate_address_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:defult_style="COLOR_BLACK"
+        app:left_button_drawable="@drawable/nav_back_black_icon"
+        app:title_background="@color/color_common_white"
+        app:title_text="Address Proof" />
+
+    <TextView
+        android:id="@+id/authenticate_address_proof_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/authenticate_address_title"
+        android:background="@color/color_authenticate_tip_background"
+        android:drawableStart="@drawable/user_authenticate_message_tip"
+        android:drawablePadding="6dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingStart="12dp"
+        android:paddingTop="9dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="9dp"
+        android:text="@string/take_photo_tip"
+        android:textColor="@color/color_common_white"
+        android:textSize="11sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/authenticate_address_proof_text">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/authenticate_address_aadhaar_root"
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/aadhaar_masked"
+                    android:textColor="#de000000"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:id="@+id/authenticate_address_aadhaar_front_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_aadhaar_front_pic"
+                        android:layout_width="68dp"
+                        android:layout_height="44dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_authenticate_aadhaar_front" />
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_aadhaar_front_status"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignEnd="@id/authenticate_address_aadhaar_front_pic"
+                        android:layout_alignBottom="@id/authenticate_address_aadhaar_front_pic"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/user_authenticate_status_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/authenticate_address_aadhaar_front_pic"
+                        android:layout_alignStart="@id/authenticate_address_aadhaar_front_pic"
+                        android:layout_alignEnd="@id/authenticate_address_aadhaar_front_pic"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/front_status"
+                        android:textColor="#5e000000"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/authenticate_address_aadhaar_back_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp">
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_aadhaar_back_pic"
+                        android:layout_width="68dp"
+                        android:layout_height="44dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_authenticate_aadhaar_back" />
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_aadhaar_back_status"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignEnd="@id/authenticate_address_aadhaar_back_pic"
+                        android:layout_alignBottom="@id/authenticate_address_aadhaar_back_pic"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/user_authenticate_status_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/authenticate_address_aadhaar_back_pic"
+                        android:layout_alignStart="@id/authenticate_address_aadhaar_back_pic"
+                        android:layout_alignEnd="@id/authenticate_address_aadhaar_back_pic"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/back_status"
+                        android:textColor="#5e000000"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <RelativeLayout
+                android:id="@+id/authenticate_address_address_select_root"
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:background="@android:color/white"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp">
+
+                <TextView
+                    android:id="@+id/authenticate_address_address_select_txt"
+                    android:layout_width="210dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_global_edit_bg"
+                    android:drawableEnd="@drawable/user_authenticate_address_arrow"
+                    android:gravity="start|center_vertical"
+                    android:hint="@string/select_txt"
+                    android:lines="1"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/theme_secondary_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/authenticate_address_address_select_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:text="@string/select_title"
+                    android:textColor="#de000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/authenticate_address_address_select_tip"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/authenticate_address_address_select_title"
+                    android:text="@string/select_tip"
+                    android:textColor="#de666666"
+                    android:textSize="8sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/authenticate_address_aadhaar2_root"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="@string/aadhaar_masked"
+                    android:textColor="#de000000"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/authenticate_address_aadhaar2_front_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_aadhaar2_front_pic"
+                        android:layout_width="68dp"
+                        android:layout_height="44dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_authenticate_address_pic_default" />
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_aadhaar2_front_status"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignEnd="@id/authenticate_address_aadhaar2_front_pic"
+                        android:layout_alignBottom="@id/authenticate_address_aadhaar2_front_pic"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/user_authenticate_status_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/authenticate_address_aadhaar2_front_pic"
+                        android:layout_alignStart="@id/authenticate_address_aadhaar2_front_pic"
+                        android:layout_alignEnd="@id/authenticate_address_aadhaar2_front_pic"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/front_status"
+                        android:textColor="#5e000000"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/authenticate_address_aadhaar2_back_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp">
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_aadhaar2_back_pic"
+                        android:layout_width="68dp"
+                        android:layout_height="44dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_authenticate_address_pic_default" />
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_aadhaar2_back_status"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignEnd="@id/authenticate_address_aadhaar2_back_pic"
+                        android:layout_alignBottom="@id/authenticate_address_aadhaar2_back_pic"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/user_authenticate_status_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/authenticate_address_aadhaar2_back_pic"
+                        android:layout_alignStart="@id/authenticate_address_aadhaar2_back_pic"
+                        android:layout_alignEnd="@id/authenticate_address_aadhaar2_back_pic"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/back_status"
+                        android:textColor="#5e000000"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/authenticate_address_voterid_root"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="@string/voterid_text"
+                    android:textColor="#de000000"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/authenticate_address_voterid_front_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_voterid_front_pic"
+                        android:layout_width="68dp"
+                        android:layout_height="44dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_authenticate_address_pic_default" />
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_voterid_front_status"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignEnd="@id/authenticate_address_voterid_front_pic"
+                        android:layout_alignBottom="@id/authenticate_address_voterid_front_pic"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/user_authenticate_status_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/authenticate_address_voterid_front_pic"
+                        android:layout_alignStart="@id/authenticate_address_voterid_front_pic"
+                        android:layout_alignEnd="@id/authenticate_address_voterid_front_pic"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/front_status"
+                        android:textColor="#5e000000"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/authenticate_address_voterid_back_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp">
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_voterid_back_pic"
+                        android:layout_width="68dp"
+                        android:layout_height="44dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_authenticate_address_pic_default" />
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_voterid_back_status"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignEnd="@id/authenticate_address_voterid_back_pic"
+                        android:layout_alignBottom="@id/authenticate_address_voterid_back_pic"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/user_authenticate_status_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/authenticate_address_voterid_back_pic"
+                        android:layout_alignStart="@id/authenticate_address_voterid_back_pic"
+                        android:layout_alignEnd="@id/authenticate_address_voterid_back_pic"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/back_status"
+                        android:textColor="#5e000000"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/authenticate_address_passport_root"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="@string/passport"
+                    android:textColor="#de000000"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/authenticate_address_passport_front_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_passport_front_pic"
+                        android:layout_width="68dp"
+                        android:layout_height="44dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_authenticate_address_pic_default" />
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_passport_front_status"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignEnd="@id/authenticate_address_passport_front_pic"
+                        android:layout_alignBottom="@id/authenticate_address_passport_front_pic"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/user_authenticate_status_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/authenticate_address_passport_front_pic"
+                        android:layout_alignStart="@id/authenticate_address_passport_front_pic"
+                        android:layout_alignEnd="@id/authenticate_address_passport_front_pic"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/front_status"
+                        android:textColor="#5e000000"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/authenticate_address_passport_back_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp">
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_passport_back_pic"
+                        android:layout_width="68dp"
+                        android:layout_height="44dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_authenticate_address_pic_default" />
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_passport_back_status"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignEnd="@id/authenticate_address_passport_back_pic"
+                        android:layout_alignBottom="@id/authenticate_address_passport_back_pic"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/user_authenticate_status_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/authenticate_address_passport_back_pic"
+                        android:layout_alignStart="@id/authenticate_address_passport_back_pic"
+                        android:layout_alignEnd="@id/authenticate_address_passport_back_pic"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/back_status"
+                        android:textColor="#5e000000"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/authenticate_address_driver_ocr_root"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_weight="1"
+                    android:text="@string/driving_licence"
+                    android:textColor="#de000000"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/authenticate_address_driver_ocr_front_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_driver_ocr_front_pic"
+                        android:layout_width="68dp"
+                        android:layout_height="44dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_authenticate_address_pic_default" />
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_driver_ocr_front_status"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignEnd="@id/authenticate_address_driver_ocr_front_pic"
+                        android:layout_alignBottom="@id/authenticate_address_driver_ocr_front_pic"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/user_authenticate_status_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/authenticate_address_driver_ocr_front_pic"
+                        android:layout_alignStart="@id/authenticate_address_driver_ocr_front_pic"
+                        android:layout_alignEnd="@id/authenticate_address_driver_ocr_front_pic"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/front_status"
+                        android:textColor="#5e000000"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/authenticate_address_driver_ocr_back_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp">
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_driver_ocr_back_pic"
+                        android:layout_width="68dp"
+                        android:layout_height="44dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_authenticate_address_pic_default" />
+
+                    <ImageView
+                        android:id="@+id/authenticate_address_driver_ocr_back_status"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignEnd="@id/authenticate_address_driver_ocr_back_pic"
+                        android:layout_alignBottom="@id/authenticate_address_driver_ocr_back_pic"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:src="@drawable/user_authenticate_status_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/authenticate_address_driver_ocr_back_pic"
+                        android:layout_alignStart="@id/authenticate_address_driver_ocr_back_pic"
+                        android:layout_alignEnd="@id/authenticate_address_driver_ocr_back_pic"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/back_status"
+                        android:textColor="#5e000000"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/authenticate_address_driver_fill_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/authenticate_address_driver_fill_license_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/authenticate_address_driver_fill_license_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/driving_licence_number"
+                        android:textColor="@color/color_common_text_tip"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/authenticate_address_driver_fill_license_edit"
+                        android:layout_width="210dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/shape_global_edit_bg"
+                        android:gravity="end|center_vertical"
+                        android:hint="@string/input_number"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingEnd="10dp"
+                        android:textColor="@color/theme_secondary_color"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/authenticate_address_driver_fill_birday_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="17dp"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/authenticate_address_driver_fill_birthday_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/birth_text"
+                        android:textColor="@color/color_common_text_tip"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/authenticate_address_driver_fill_birthday_select"
+                        android:layout_width="210dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/shape_global_edit_bg"
+                        android:gravity="end|center_vertical"
+                        android:hint="@string/birth_edit"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingEnd="10dp"
+                        android:textColor="@color/theme_secondary_color"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/authenticate_address_next_txt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/selector_global_button"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/continue_text"
+                android:textColor="@color/common_btn_textcolor_selector"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

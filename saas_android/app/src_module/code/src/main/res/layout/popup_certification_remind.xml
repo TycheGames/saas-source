@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/shape_white_bg_corners_6"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Certification reminder"
+        android:textColor="@color/color_3e3d3d"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="Miss sister ~ You have not been certified yet, certified girls are more popular!"
+        android:textColor="@color/color_3e3d3d"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_popup_close"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_popup_cbcbcb_btn_bg_bottom_left_radios"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/color_232021"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_popup_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_popup_confirm_btn_bg_bottom_right_radios"
+            android:gravity="center"
+            android:text="Certify Now"
+            android:textColor="@color/color_232021"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

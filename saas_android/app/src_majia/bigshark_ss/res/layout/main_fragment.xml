@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_home_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.bigshark.android.fragments.home.MainFragment">
+
+    <com.bigshark.android.core.component.navigator.NavigationStatusLinearLayout
+        android:id="@+id/main_fragment_titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:defult_style="WHITEBG_BLACKTEXT"
+        app:title_text="@string/app_name" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/main_fragment_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_fragment_titleView"
+        app:srlAccentColor="#fff"
+        app:srlHeaderHeight="80dp"
+        app:srlPrimaryColor="@color/theme_color">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/main_fragment_credit_background_layout"
+                    layout="@layout/main_fragment_credit_background_layout" />
+
+                <TextView
+                    android:id="@+id/main_fragment_credit_msg_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginTop="47dp"
+                    android:text="Available Credit Up to "
+                    android:textColor="#FF000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/main_fragment_credit_limit_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginTop="68dp"
+                    android:shadowColor="#fffecd16"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="3.0"
+                    android:text="₹ 200,000"
+                    android:textColor="#FF000000"
+                    android:textSize="52sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/main_fragment_flow_title_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_fragment_credit_limit_TextView"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginTop="51dp"
+                    android:text="Maximize your credit by repaying your loan on time"
+                    android:textColor="#FF000000"
+                    android:textSize="9sp" />
+
+                <LinearLayout
+                    android:id="@+id/main_fragment_flow_content_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="197dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:layout_marginStart="42dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="33dp"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/main_fragment_flow_1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:includeFontPadding="false"
+                            android:text="Submit basic info"
+                            android:textColor="#FF000000"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="100% digital"
+                            android:textColor="#FF000000"
+                            android:textSize="7sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:layout_marginStart="17dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="33dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/main_fragment_flow_2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:includeFontPadding="false"
+                            android:text="Quick approval"
+                            android:textColor="#FF000000"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="only in 3 minutes"
+                            android:textColor="#FF000000"
+                            android:textSize="7sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:layout_marginStart="17dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="44dp"
+                            android:layout_height="33dp"
+                            android:layout_marginStart="21dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/main_fragment_flow_3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="8dp"
+                            android:includeFontPadding="false"
+                            android:text="Cash to account"
+                            android:textColor="#FF000000"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:includeFontPadding="false"
+                            android:text="review in 1 minute"
+                            android:textColor="#FF000000"
+                            android:textSize="7sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/main_fragment_protecol_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/main_fragment_credit_background_layout"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center_horizontal"
+                    android:includeFontPadding="true"
+                    android:text="By clicking it, I accept the Terms of use &amp; Privacy Policy &amp; Privacy Policy."
+                    android:textColor="#ff222222"
+                    android:textSize="9sp" />
+
+                <TextView
+                    android:id="@+id/main_fragment_enter_btn_TextView"
+                    android:layout_width="354dp"
+                    android:layout_height="63dp"
+                    android:layout_below="@id/main_fragment_protecol_TextView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/fragment_main_jump_bg"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="15dp"
+                    android:text="APPLY >"
+                    android:textColor="#ffffff"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <ImageView
+        android:id="@+id/main_fragment_floatimage_ImageView"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bigshark.android.utils.thirdsdk.shuzilm">
+
+
+    <!--应用联网，向服务器上报数据。-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--检测联网方式，以决定是否上报。-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Optional: 获取用户设备的 IMEI，以关联双方数据。 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+</manifest>
+

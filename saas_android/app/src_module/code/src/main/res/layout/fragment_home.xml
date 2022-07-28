@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background_color"
+    android:orientation="vertical"
+    tools:context=".fragments.mine.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_home_titlebar_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/home_titlebar_search_icon"/>
+
+        <TextView
+            android:id="@+id/tv_home_titlebar_region"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:drawableRight="@drawable/home_titlebar_location_icon"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="附近"
+            android:textColor="@color/color_3e3d3d"
+            android:textSize="19sp"/>
+
+        <CheckBox
+            android:id="@+id/cb_home_titlebar_switch_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/selector_checkbox_hometitle_gender"
+            android:padding="10dp"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_men"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/tab_layout_home_men"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                app:tl_indicator_color="#FBDF18"
+                app:tl_indicator_height="3dp"
+                app:tl_indicator_width_equal_title="true"
+                app:tl_tab_space_equal="true"
+                app:tl_textAllCaps="true"
+                app:tl_textSelectColor="@color/color_3e3d3d"
+                app:tl_textUnselectColor="#9E9EA4"
+                app:tl_textsize="19sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/theme_line_color"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_homepager_men"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_women"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/tab_layout_home_women"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                app:tl_indicator_color="#FBDF18"
+                app:tl_indicator_height="3dp"
+                app:tl_indicator_width_equal_title="true"
+                app:tl_tab_space_equal="true"
+                app:tl_textAllCaps="true"
+                app:tl_textSelectColor="@color/color_3e3d3d"
+                app:tl_textUnselectColor="#9E9EA4"
+                app:tl_textsize="19sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/theme_line_color"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_homepager_women"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

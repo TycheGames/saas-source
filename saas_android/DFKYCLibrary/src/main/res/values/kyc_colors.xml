@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="kyc_text_black">#383838</color>
+    <color name="kyc_text_black_opacity">#33383838</color>
+    <color name="kyc_text_white">#ffffff</color>
+    <color name="kyc_text_white_opacity">#99ffffff</color>
+    <color name="kyc_aadhaar_card_bg_start">#7A8AFF</color>
+    <color name="kyc_aadhaar_card_bg_end">#0072FF</color>
+    <color name="kyc_aadhaar_next_bg_start">#76A4FF</color>
+    <color name="kyc_aadhaar_next_bg_end">#96AAFF</color>
+    <color name="kyc_transparent">#00000000</color>
+    <color name="kyc_loading_dialog_bg">#ccffffff</color>
+    <color name="kyc_message_dialog_bg">#cc000000</color>
+    <color name="kyc_aadhaar_next_bg_press">#24314D</color>
+    <color name="kyc_permission_yes_bg_press">#334D83</color>
+    <color name="kyc_permission_no_bg_normal">#D3D3D3</color>
+    <color name="kyc_permission_no_bg_press">#515151</color>
+</resources>

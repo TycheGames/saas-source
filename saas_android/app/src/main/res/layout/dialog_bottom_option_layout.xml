@@ -1,0 +1,28 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center|end"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/dialog_cancle_text"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center|end"
+        android:paddingStart="30dp"
+        android:text="CANCEL"
+        android:textColor="@color/theme_secondary_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/dialog_ok_text"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center|end"
+        android:paddingStart="30dp"
+        android:text="OK"
+        android:textColor="@color/theme_secondary_color"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_popup_bg_white_top_corners_10"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_popup_close"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:src="@mipmap/popup_topright_close_icon"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_shielding"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_shielding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Pull black"
+            android:textColor="@color/color_3e3d3d"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_shielding"
+            android:text="(Block both parties)"
+            android:textColor="@color/color_9e9ea4"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:background="@color/theme_background_color"/>
+
+    <TextView
+        android:id="@+id/tv_report"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="80dp"
+        android:gravity="center"
+        android:text="report"
+        android:textColor="@color/color_3e3d3d"
+        android:textSize="15sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/theme_background_color"/>
+</LinearLayout>

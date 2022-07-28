@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:minHeight="200dp">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/livenesslibrary_failure_dialog_title"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_title"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/livenesslibrary_dialog_icon_light" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/livenesslibrary_failure_dialog_light_notice"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/livenesslibrary_dialog_notice_dimen" />
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:src="@drawable/livenesslibrary_dialog_icon_phone" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/livenesslibrary_failure_dialog_phone_notice"-->
+                    <!--android:textColor="@color/darkGray"-->
+                    <!--android:textSize="@dimen/livenesslibrary_dialog_notice_dimen" />-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/livenesslibrary_dialog_icon_glasses" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/livenesslibrary_failure_dialog_glasses_notice"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/livenesslibrary_dialog_notice_dimen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/livenesslibrary_dialog_icon_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/livenesslibrary_failure_dialog_time_notice"
+                    android:textColor="@color/darkGray"
+                    android:textSize="@dimen/livenesslibrary_dialog_notice_dimen" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/id_llyt_dialog_btn">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/darkGray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_llyt_dialog_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dialog_cancel"
+                style="?android:buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/livenesslibrary_alertdialog_right_selector"
+                android:text="@string/livenesslibrary_cancel_text"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:id="@+id/img_line"
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="@color/darkGray" />
+
+            <Button
+                android:id="@+id/dialog_ok"
+                style="?android:buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/livenesslibrary_alertdialog_right_selector"
+                android:text="@string/livenesslibrary_ok_text"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

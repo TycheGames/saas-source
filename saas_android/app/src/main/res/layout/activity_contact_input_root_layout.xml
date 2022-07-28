@@ -1,0 +1,322 @@
+<LinearLayout android:id="@+id/contact_activity_contact_input_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/color_common_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:background="@color/theme_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/contact_tip"
+            android:textColor="@color/color_common_text_tip"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/authenticate_contact_urgent_relationship_root"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/color_common_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/relationship_text"
+            android:textColor="@color/color_common_text_tip"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/authenticate_contact_urgent_relation_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:background="@color/color_common_white"
+            android:gravity="center|end"
+            android:hint="@string/contact_choose_tip"
+            android:textColor="@color/color_common_text_tip"
+            android:textColorHint="#ffadadad"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/global_right_arrows_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_common_white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/color_common_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/authenticate_contact_urgent_name_root"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/color_common_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_name"
+            android:textColor="@color/color_common_text_tip"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/authenticate_contact_urgent_name_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:background="@color/color_common_white"
+            android:gravity="center|end"
+            android:hint="@string/contact_choose_tip"
+            android:textColor="@color/color_common_text_tip"
+            android:textColorHint="#ffadadad"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/global_right_arrows_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_common_white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/color_common_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/color_common_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_number"
+            android:textColor="@color/color_common_text_tip"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/authenticate_contact_urgent_phone_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_common_white"
+            android:gravity="center|end"
+            android:hint="@string/contact_number_tip"
+            android:textColor="@color/color_common_text_tip"
+            android:textColorHint="#ffadadad"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/color_common_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:background="@color/theme_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/contact_other_reference"
+            android:textColor="@color/color_common_text_tip"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/authenticate_contact_other_relationship_root"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/color_common_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/relationship_text"
+            android:textColor="@color/color_common_text_tip"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/authenticate_contact_other_relation_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:background="@color/color_common_white"
+            android:gravity="center|end"
+            android:hint="@string/contact_choose_tip"
+            android:textColor="@color/color_common_text_tip"
+            android:textColorHint="#ffadadad"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/global_right_arrows_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_common_white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/color_common_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/authenticate_contact_other_name_root"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/color_common_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_person_name"
+            android:textColor="@color/color_common_text_tip"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/authenticate_contact_other_name_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:background="@color/color_common_white"
+            android:gravity="center|end"
+            android:hint="@string/contact_choose_tip"
+            android:textColor="@color/color_common_text_tip"
+            android:textColorHint="#ffadadad"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/global_right_arrows_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_common_white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/color_common_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/color_common_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_person_num"
+            android:textColor="@color/color_common_text_tip"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/authenticate_contact_other_phone_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_common_white"
+            android:gravity="center|end"
+            android:hint="@string/contact_number_tip"
+            android:textColor="@color/color_common_text_tip"
+            android:textColorHint="#ffadadad"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_startup_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_common_white"
+    android:orientation="vertical"
+    tools:context="com.bigshark.android.activities.home.ApplicationEnterActivity">
+
+    <com.bigshark.android.core.component.navigator.NavigationStatusLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:defult_style="NO_TITLE_BLCAK" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/layout_global_hide_edittext_cursor" />
+
+        <EditText
+            android:id="@+id/app_startup_dev_edit"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="@string/dev_edit" />
+
+        <Button
+            android:id="@+id/application_enter_developer_url_EditText"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/config_btn" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/app_startup_gotobrowser_edit"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="@string/goto_webview" />
+
+        <Button
+            android:id="@+id/application_enter_browser_edit"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/webview_btn" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/application_enter_urls_list"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/application_enter_product_url"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="@string/online_text"
+        android:textSize="20sp" />
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Drop Shadow Stack -->
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/white_shade_shape"
+                android:left="@dimen/white_shade_shape"
+                android:right="@dimen/white_shade_shape"
+                android:top="@dimen/white_shade_shape" />
+            <solid android:color="#0DBDBDBD" />
+            <corners android:radius="@dimen/white_shade_shape_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/white_shade_shape"
+                android:left="@dimen/white_shade_shape"
+                android:right="@dimen/white_shade_shape"
+                android:top="@dimen/white_shade_shape" />
+            <solid android:color="#1ABDBDBD" />
+            <corners android:radius="@dimen/white_shade_shape_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:bottom="@dimen/white_shade_shape"
+                android:left="@dimen/white_shade_shape"
+                android:right="@dimen/white_shade_shape"
+                android:top="@dimen/white_shade_shape" />
+            <solid android:color="#26BDBDBD" />
+            <corners android:radius="@dimen/white_shade_shape_radius" />
+        </shape>
+    </item>
+    <!-- Background -->
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="@dimen/white_shade_shape_radius" />
+        </shape>
+    </item>
+</layer-list>

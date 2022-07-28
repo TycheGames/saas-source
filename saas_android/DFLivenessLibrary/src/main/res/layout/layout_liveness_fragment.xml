@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <include layout="@layout/livenesslibrary_fragment_camera_overlap"/>
+
+    <LinearLayout
+        android:id="@+id/anim_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/noteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="7dp"
+            android:padding="10dp"
+            android:text="@string/livenesslibrary_start_test"
+            android:textColor="@color/black"
+            android:textSize="@dimen/notice_size"/>
+
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal">
+
+            <com.liveness.dflivenesslibrary.view.DFGifView
+                android:id="@+id/id_gv_play_action"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <com.liveness.dflivenesslibrary.view.CircleTimeView
+                android:id="@+id/time_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:circle_color="@color/circle_border"
+                app:circle_width="4"
+                app:max_time="@integer/livenesslibrary_max_time"
+                app:text_color="#ffffff"
+                app:text_redus="100"
+                app:text_size="20"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="7dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/wait_time_notice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b0000000"
+            android:gravity="center"
+            android:text="@string/livenesslibrary_liceness_will_start"
+            android:textSize="@dimen/notice_size"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/id_tv_silent_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="160dp"
+        android:padding="10dp"
+        android:textColor="@color/hint_color"
+        android:textSize="@dimen/notice_size"
+        android:visibility="gone"/>
+
+</RelativeLayout>

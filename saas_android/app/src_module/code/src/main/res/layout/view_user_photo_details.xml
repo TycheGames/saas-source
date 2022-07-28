@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_big_photo_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_set_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/shade_photo_larger_version">
+
+            <!--阅后即焚，还未焚毁-->
+            <RelativeLayout
+                android:id="@+id/rl_burn_after_reading"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_burn_after_reading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/view_larger_image_burn_after_reading"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/burn_after_reading"
+                        android:textColor="@color/color_857d7a"
+                        android:textSize="11sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="90dp"
+                        android:src="@mipmap/long_press_icon"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/view_on_screen"
+                        android:textColor="@color/color_666666"
+                        android:textSize="14sp"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--红包照片 发红包-->
+            <LinearLayout
+                android:id="@+id/ll_send_red_envelope"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/ll_red_envelope"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/red_envelope_photos_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="31dp"
+                        android:text="@string/red_envelope_to_see_photos"
+                        android:textColor="@color/color_666666"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="3.00"
+                        android:textColor="#ff655e"
+                        android:textSize="25sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:src="@mipmap/send_red_envelope_detele_icon"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <!--已焚毁，并且用户不是vip或已经认证-->
+            <LinearLayout
+                android:id="@+id/ll_has_burned"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/view_larger_image_has_burned"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/photo_burned"
+                    android:textColor="@color/color_857d7a"
+                    android:textSize="11sp"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_to_certification_prompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_vip_describe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/after_certification_add_time"
+                        android:textColor="@color/color_666666"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_vip"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="80dp"
+                        android:gravity="center"
+                        android:text="@string/certified_now"
+                        android:textColor="@color/color_161618"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+<!--    <com.dinuscxj.progressbar.CircleProgressBar-->
+<!--        android:id="@+id/custom_progress"-->
+<!--        android:layout_width="35dp"-->
+<!--        android:layout_height="35dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:visibility="gone"-->
+<!--        app:progress_background_color="@color/color_gray_d9d9d9"-->
+<!--        app:progress_end_color="@color/theme_color"-->
+<!--        app:progress_start_color="@color/theme_color"-->
+<!--        app:progress_stroke_width="3dp"-->
+<!--        app:progress_text_color="@color/theme_color"-->
+<!--        app:style="solid_line"/>-->
+
+</RelativeLayout>

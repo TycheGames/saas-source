@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/app_launcher_guide_dot_theme_skin" android:state_enabled="false" />
+    <item android:drawable="@drawable/app_launcher_guide_dot_default_skin" android:state_enabled="true" />
+
+</selector>

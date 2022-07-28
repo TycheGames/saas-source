@@ -1,0 +1,98 @@
+/**
+ * 马甲包的配置
+ */
+
+
+class MaJia {
+    String fileName
+    String manifestApplicationId
+    String scheme, host// URI拉起APP
+
+    String httpPackageName// 配置渠道前缀、http的UA
+    def httpOnlineBaseUrls = []// 线上的默认地址
+
+    String storeFile, storePassword, keyAlias, keyPassword
+
+    boolean isGooglePlayPackage// 是否为Google Play的包，该包中权限请求的不多
+
+    String innerVersionName = '1.5.1'// 内部版本号
+    String showVersionName// APP显示的版本号
+    int versionCode
+
+    def rootDir = '', resDir = [], javaDir = [], assetsDir = []// 资源
+
+    String spModule// sp模块的名称
+    String webviewModule// webview模块的名称
+
+    // 数字联盟
+    String dataShuzilmApikey = "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAOf/yJ+vki7MNb3v0er8QctqtKUM67nstuCqHrxbxqLe4m1uwuuMpEdw/YKsHD6tON2ycnmTkJ6yr3Fis5cU4FkCAwEAAQ=="
+    String buglyAppId, buglyAppKey // bugly
+}
+
+
+static def create_sass(showVersionName, versionCode, isGooglePlayPackage) {
+    new MaJia(
+            fileName: 'bigshark',
+            manifestApplicationId: "com.bigshark.android",
+            scheme: "bigshark", host: "com.bigshark.android",// 公司名称：cloud atlas future technology
+
+            httpPackageName: "bigshark",
+            httpOnlineBaseUrls: ["http://api.ln-bigshark.com", "http://149.129.172.210"],
+
+//            storeFile: "src_majia/bigshark/rupeeplus.keystore", storePassword: "rupeeplus123789", keyAlias: "rupeeplus", keyPassword: "0987rupeeplus123",
+            // CN=bigshark, OU=bigshark, O=bigshark, L=Hyderabad, ST=Telangana, C=IND
+            storeFile: "src_majia/bigshark/bigshark.keystore", storePassword: "123bigshark098", keyAlias: "bigshark", keyPassword: "bigshark998877",
+
+
+            isGooglePlayPackage: isGooglePlayPackage,
+            showVersionName: showVersionName, versionCode: versionCode,
+
+            rootDir: "src_majia/bigshark",
+            resDir: ['src_majia/bigshark/res'], javaDir: ['src_majia/bigshark/java'], assetsDir: ['src_majia/bigshark/assets'],
+
+            buglyAppId: "b376ff7726", buglyAppKey: '89d9b23c-3fab-4c37-8d2b-6efd7bcc8e68',
+
+            spModule: 'lib_sharedpreferences_mmkv',
+//            spModule: 'lib_sharedpreferences_proxy',
+            webviewModule: 'lib_webview_x5'
+    )
+}
+
+// 测试sass中不同APP需要使用的
+static def create_smallshark(showVersionName, versionCode, isGooglePlayPackage) {
+    new MaJia(
+            fileName: 'smallshark',
+            manifestApplicationId: "com.bigshark.ss",
+            scheme: "smallshark", host: "com.bigshark.ss",// 公司名称：cloud atlas future technology
+
+            httpPackageName: "smallshark",
+            httpOnlineBaseUrls: ["http://api.rupee-plus.in", "http://147.139.4.121"],
+
+//            storeFile: "src_majia/bigshark/rupeeplus.keystore", storePassword: "rupeeplus123789", keyAlias: "rupeeplus", keyPassword: "0987rupeeplus123",
+            // CN=bigshark, OU=bigshark, O=bigshark, L=Hyderabad, ST=Telangana, C=IND
+            storeFile: "src_majia/bigshark_ss/bigshark.keystore", storePassword: "123bigshark098", keyAlias: "bigshark", keyPassword: "bigshark998877",
+
+
+            isGooglePlayPackage: isGooglePlayPackage,
+            showVersionName: showVersionName, versionCode: versionCode,
+
+            rootDir: "src_majia/bigshark_ss",
+            resDir: ['src_majia/bigshark_ss/res'], javaDir: ['src_majia/bigshark_ss/java'], assetsDir: ['src_majia/bigshark_ss/assets'],
+
+            buglyAppId: "b376ff7726", buglyAppKey: '89d9b23c-3fab-4c37-8d2b-6efd7bcc8e68',
+
+            spModule: 'lib_sharedpreferences_mmkv',
+//            spModule: 'lib_sharedpreferences_proxy',
+            webviewModule: 'lib_webview_x5'
+    )
+}
+
+ext {
+
+    majia_sass_gp = create_sass('1.0.0', 202, true)
+    majia_sass_ngp = create_sass('1.0.0', 202, false)
+
+    majia_smallshark_gp = create_smallshark('1.0.0', 202, true)
+    majia_smallshark_ngp = create_smallshark('1.0.0', 202, false)
+
+}

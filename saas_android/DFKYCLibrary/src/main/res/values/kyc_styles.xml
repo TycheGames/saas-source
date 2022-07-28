@@ -1,0 +1,28 @@
+<resources>
+    <!-- Base application theme. -->
+
+    <style name="KYCBoldTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/kyc_text_large_size</item>
+        <item name="android:textColor">@color/kyc_text_black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="KYCContentStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/kyc_text_default_size</item>
+        <item name="android:textColor">@color/kyc_text_black</item>
+    </style>
+
+    <style name="KYCLoadingDialog" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@color/kyc_loading_dialog_bg</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>

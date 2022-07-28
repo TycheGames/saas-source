@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/shape_white_bg_corners_6"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/popup_prompt_icon"/>
+
+    <TextView
+        android:id="@+id/tv_prompt_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Dear ~ you can still see 3 ladies today"
+        android:textColor="@color/color_3e3d3d"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_default_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:text="Non-member users can only view 10 ladies per day"
+        android:textColor="@color/color_9e9ea4"
+        android:textSize="12sp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_popup_close"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_popup_white_btn_bg_bottom_left_radios"
+            android:gravity="center"
+            android:text="Continue to view"
+            android:textColor="@color/color_689cff"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_popup_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_popup_confirm_btn_bg_bottom_right_radios"
+            android:gravity="center"
+            android:text="Upgrade Member"
+            android:textColor="@color/color_232021"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

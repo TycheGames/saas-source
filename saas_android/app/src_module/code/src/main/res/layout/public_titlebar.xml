@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_titlebar_left_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:src="@mipmap/common_titbar_back_grey_icon"/>
+
+    <ImageView
+        android:id="@+id/iv_titlebar_close"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/iv_titlebar_left_back"
+        android:src="@mipmap/popup_topright_close_icon"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_titlebar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="title"
+        android:textColor="@color/color_3e3d3d"
+        android:textSize="19sp"/>
+
+</RelativeLayout>

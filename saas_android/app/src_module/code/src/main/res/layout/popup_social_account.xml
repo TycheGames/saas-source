@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/shape_white_bg_corners_6"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="她的社交账号"
+            android:textColor="@color/color_3e3d3d"
+            android:textSize="17sp"/>
+
+        <ImageView
+            android:id="@+id/iv_popup_close"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/popup_topright_close_icon"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_qq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/social_account_popup_qq_icon"/>
+
+        <TextView
+            android:id="@+id/tv_qq_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/color_3e3d3d"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_copy_qq"
+            android:layout_width="44dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="copy"
+            android:textColor="@color/color_232021"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_weixin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/social_account_popup_weixin_icon"/>
+
+        <TextView
+            android:id="@+id/tv_weixin_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/color_3e3d3d"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_copy_weixin"
+            android:layout_width="44dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:text="copy"
+            android:textColor="@color/color_232021"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="30dp"
+        android:background="#f5f5f5"/>
+
+    <TextView
+        android:id="@+id/tv_popup_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_popup_confirm_btn_white_bg"
+        android:gravity="center"
+        android:text="Send her social account>"
+        android:textColor="@color/color_689cff"
+        android:textSize="15sp"/>
+
+</LinearLayout>

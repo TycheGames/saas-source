@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- truecaller: 配置truecaller的appKey -->
+    <string name="partnerKey">yqqGKa8fc1ea7799c4e188c73f059e3afad29</string>
+</resources>

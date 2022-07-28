@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/kyc_text_white">
+
+    <ScrollView
+        android:id="@+id/id_sv_rooter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/id_include_title"
+                layout="@layout/kyc_custom_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/kyc_default_title_height" />
+
+            <TextView
+                android:id="@+id/id_aadhaar_title"
+                style="@style/KYCBoldTitleStyle"
+                android:layout_below="@+id/id_include_title"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="@string/kyc_adahaar_number_title" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_aadhaar_title"
+                android:layout_marginLeft="@dimen/kyc_default_left_margin"
+                android:layout_marginRight="@dimen/kyc_default_left_margin"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/kyc_aadhaar_card_bg"
+                android:paddingBottom="25dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp">
+
+                <com.deepfinch.kyclib.view.BankCardNumEditText
+                    android:id="@+id/id_tv_hint_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/kyc_default_left_margin"
+                    android:background="@color/kyc_transparent"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="12"
+                    android:textColor="@color/kyc_text_white"
+                    android:textSize="@dimen/kyc_text_small_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/id_tv_hint_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/id_tv_hint_title"
+                    android:layout_marginTop="@dimen/kyc_default_left_margin"
+                    android:text="@string/kyc_otp_hint"
+                    android:textColor="@color/kyc_text_white"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/id_et_otp_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/id_tv_hint_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/kyc_aadhaar_number_input_bg"
+                    android:gravity="center"
+                    android:hint="@string/kyc_otp_input_hint"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/id_btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/id_et_otp_number"
+                    android:layout_marginLeft="@dimen/kyc_default_left_margin"
+                    android:layout_marginRight="@dimen/kyc_default_left_margin"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/kyc_aadhaar_number_next_bg"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="@string/kyc_next"
+                    android:textColor="@color/kyc_text_white"
+                    android:textSize="@dimen/kyc_text_small_size" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

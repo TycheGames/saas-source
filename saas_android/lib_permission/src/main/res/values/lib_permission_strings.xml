@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="call_log_tip">Call records</string>
+    <string name="please_open_call_log">Please open call history permissions</string>
+
+    <string name="sms_tip">SMS</string>
+    <string name="please_open_sms">Please turn on SMS permission</string>
+
+</resources>
+

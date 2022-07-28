@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kyc_text_white"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:id="@+id/id_sv_rooter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/id_include_title"
+                layout="@layout/kyc_custom_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/id_aadhaar_title"
+                style="@style/KYCBoldTitleStyle"
+                android:layout_below="@+id/id_include_title"
+                android:gravity="center"
+                android:text="@string/kyc_adahaar_number_title" />
+
+            <TextView
+                android:id="@+id/id_aadhaar_content"
+                style="@style/KYCContentStyle"
+                android:layout_below="@+id/id_aadhaar_title"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="@string/kyc_otp_hint_content"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/id_aadhaar_content_2"
+                style="@style/KYCContentStyle"
+                android:layout_below="@+id/id_aadhaar_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="@string/kyc_otp_hint_content_2"
+                android:textSize="14dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="440dp"
+                android:layout_below="@+id/id_aadhaar_content_2"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="6dp"
+                android:background="@mipmap/kyc_otp_bg_rectangle">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/kyc_text_white"
+                    app:cardCornerRadius="16dp">
+
+                    <com.deepfinch.kyclib.view.DFWebView
+                        android:id="@+id/id_wv_otp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </com.deepfinch.kyclib.view.DFWebView>
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/id_rlyt_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:background="@color/kyc_text_white"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/id_otp_loading_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/id_otp_loading_2"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/kyc_otp_loading_1"
+            android:textColor="@color/kyc_text_black"
+            android:textSize="@dimen/kyc_text_default_size" />
+
+        <TextView
+            android:id="@+id/id_otp_loading_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/id_otp_loading_3"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/kyc_otp_loading_2"
+            android:textColor="@color/kyc_text_black"
+            android:textSize="@dimen/kyc_text_default_size" />
+
+        <TextView
+            android:id="@+id/id_otp_loading_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/id_iv_progress_spinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="64dp"
+            android:gravity="center"
+            android:text="@string/kyc_otp_loading_3"
+            android:textColor="@color/kyc_text_black"
+            android:textSize="@dimen/kyc_text_default_size" />
+
+        <ImageView
+            android:id="@+id/id_iv_progress_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="TODO"
+            android:src="@mipmap/kyc_progress_dlg" />
+
+        <TextView
+            android:id="@+id/id_otp_loading_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_iv_progress_spinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="64dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="@string/kyc_loading"
+            android:textColor="@color/kyc_text_black_opacity"
+            android:textSize="@dimen/kyc_text_default_size" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

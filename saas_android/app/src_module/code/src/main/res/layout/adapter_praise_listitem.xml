@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_paraise_listitem_head"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/radiohall_listitem_head_portrait_icon"/>
+
+    <TextView
+        android:id="@+id/tv_paraise_listitem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Hahaha"
+        android:textColor="@color/color_9e9ea4"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:id="@+id/iv_paraise_listitem_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:src="@mipmap/radiohall_listitem_gender_women_icon"/>
+
+    <TextView
+        android:id="@+id/tv_paraise_listitem_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:paddingRight="15dp"
+        android:text="2019/03/04   08:42"
+        android:textColor="@color/color_9e9ea4"
+        android:textSize="11sp"/>
+
+</LinearLayout>

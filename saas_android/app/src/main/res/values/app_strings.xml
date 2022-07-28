@@ -1,0 +1,136 @@
+<resources>
+
+    <!--First-level home display-->
+    <string name="press_exit_again">Press again to exit the program</string>
+    <!--Loan home display-->
+    <string name="home_please_look_user_agreement">Please check the user agreement</string>
+    <!--Enter your mobile phone number-->
+    <string name="input_please_input_phone">Please enter your mobile phone number</string>
+    <!--registered-->
+    <string name="register_pass_not_empty">Password cannot be empty</string>
+    <string name="register_passwords_dont_match_twice">The passwords entered twice are inconsistent</string>
+    <string name="register_please_enter_verifify_code">Please enter the OTP code</string>
+    <string name="signup_please_input_verify_password">Re-enter your password</string>
+    <!--Login-->
+    <string name="login_password_login">Password login</string>
+    <string name="login_verfify_code_login">OTP login</string>
+    <string name="login_please_input_phone">Please enter your mobile phone number</string>
+    <string name="login_please_enter_verifify_code">Please enter the OTP code</string>
+    <string name="login_please_input_password">Please enter your password</string>
+    <string name="login_forget_password">Forget password</string>
+    <!--Password reset-->
+    <string name="resetpass_pass_not_empty">Password cannot be empty</string>
+    <string name="resetpass_passwords_dont_match_twice">The passwords entered twice are inconsistent</string>
+    <string name="resetpass_please_enter_verifify_code">Please enter the OTP code</string>
+    <string name="resetpass_please_input_verify_password">Please enter a confirmation password</string>
+    <!--Order confirmation-->
+    <string name="loan_please_look_loan_agreement">Please check the loan agreement</string>
+    <!--Order signing display-->
+    <string name="signature_please_enter_verifify_code">Please enter the OTP code</string>
+    <!--To socialize with one's shield-->
+    <string name="tongdun_data_exception">Data exception</string>
+    <!--Emergency contact-->
+    <string name="emerygency_not_open_system_contact">Unable to open system address book</string>
+    <string name="emerygency_not_get_system_contact">Unable to get system address book</string>
+    <string name="emerygency_not_have_contact_permission">Access to address book not obtained</string>
+    <string name="emerygency_i_know">Got it</string>
+    <string name="emerygency_goto_setting">To set up</string>
+    <string name="emerygency_contact_not_have_phone">The contact person you selected did not fill in the mobile phone number</string>
+    <string name="emerygency_phone_repetition">Duplicate emergency contact number</string>
+    <string name="emerygency_get_data_exception">Exception in loading data, please try again later</string>
+    <string name="emerygency_please_select_contact_one_relation">Please select the immediate family emergency contact relationship</string>
+    <string name="emerygency_please_select_contact_one_phone">Please select immediate family emergency contact</string>
+    <string name="emerygency_please_select_contact_two_relation">Please select another contact relationship</string>
+    <string name="emerygency_please_select_contact_two_phone">Please select another contact</string>
+    <string name="emerygency_contact_tip">Address book</string>
+    <string name="emerygency_please_open_contact">Please open address book permissions</string>
+
+    <string name="location_tip">Location</string>
+    <string name="please_open_location">Please open location permissions</string>
+
+    <string name="signature_please_sign_your_name">Please sign your name</string>
+
+    <string name="continue_text">CONTINUE</string>
+    <string name="your_selfie">Your Selfie</string>
+    <string name="front_status">Front</string>
+    <string name="back_status">Back</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="pwd_login">Password Login</string>
+    <string name="phone_text">Phone</string>
+    <string name="pwd_text">Password</string>
+    <string name="login_text">LOGIN</string>
+    <string name="login_tip">By logging in, you agree to our Terms Of Use &amp; Privacy Policy</string>
+
+    <!--AddressCardAuth   -->
+    <string name="take_photo_tip">Make sure you are taking clear photos of original documents</string>
+    <string name="aadhaar_masked">Aadhaar(masked)</string>
+    <string name="select_txt">Choose a way</string>
+    <string name="select_title">Address Proof</string>
+    <string name="select_tip">Just select one </string>
+    <string name="voterid_text">Voter ID</string>
+    <string name="passport">Passport</string>
+    <string name="driving_licence">Driving Licence</string>
+    <string name="driving_licence_number">Driving Licence Number</string>
+    <string name="input_number">Input Number</string>
+    <string name="birth_text">Date of Birth</string>
+    <string name="birth_edit">Your Birthday</string>
+
+    <!--starp_up-->
+    <string name="dev_edit">dev</string>
+    <string name="config_btn">config</string>
+    <string name="goto_webview">goto webview</string>
+    <string name="webview_btn">webview</string>
+    <string name="online_text">online</string>
+
+    <!--emergency_contact -->
+    <string name="contact_title">Contact Information</string>
+    <string name="contact_tip">Urgent Contact</string>
+    <string name="contact_choose_tip">Please choose</string>
+    <string name="contact_text">To avoid your application will be rejected, please make sure all the information are correct.</string>
+    <string name="relationship_text">Relationship</string>
+    <string name="contact_name">Name</string>
+    <string name="contact_number">Phone number</string>
+    <string name="contact_number_tip">input mobile phone number</string>
+    <string name="contact_other_reference">Other Reference</string>
+    <string name="contact_person_name">Person\'s Name</string>
+    <string name="contact_person_num">Person\'s phone No.</string>
+    <string name="contact_optional">Optional</string>
+    <string name="contact_facebook">Facebook Account</string>
+    <string name="contact_input_tip">Please input</string>
+    <string name="contact_whats_app">Whats app account</string>
+    <string name="contact_skype_account">Skype account</string>
+
+    <!--kyc认证页面 -->
+    <string name="selfie_text">Take your selfie</string>
+    <string name="pan_card">PAN Card</string>
+    <string name="pan_num">PAN Number</string>
+    <string name="pan_num_tip">Please Input PAN Number</string>
+
+    <!--OTP Login-->
+    <string name="otp_login_text">OTP Login</string>
+    <string name="otp_text">OTP</string>
+
+    <!--face_authenticate   -->
+    <string name="take_selfie">Take a selfie</string>
+    <string name="selfie_img_tip">We need to verify you are real person</string>
+    <string name="submit_text">SUBMIT</string>
+
+    <!--Register And Reset pwd   -->
+    <string name="register_text">Register</string>
+    <string name="input_password_tip">please input password</string>
+    <string name="otp_code">OTP Code</string>
+    <string name="register_upper_case">REGISTER</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="input_phone_tip">please input phone</string>
+    <string name="reset_text">RESET</string>
+
+    <!--user_enter-->
+    <string name="phone_area_code">+91</string>
+    <string name="phone_num_tip">Please enter your mobile number</string>
+    <string name="next_text">NEXT</string>
+    <string name="or_text">or</string>
+    <string name="login_with_truecaller">LOGIN WITH TRUECALLER</string>
+    <string name="enter_tip">By logging in, I accept the Terms Of Use &amp; Privacy Policy</string>
+
+</resources>
+

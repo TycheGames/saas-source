@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_theme_background">#F2F3F4</color>
+    <color name="color_common_black">#333333</color>
+    <color name="color_common_white">#FFFFFF</color>
+    <color name="color_common_line">#E0E0E0</color>
+    <color name="color_common_red">#E50228</color>
+
+    <color name="color_common_text">#888888</color>
+    <color name="color_common_text_tip">#333333</color>
+    <color name="color_authenticate_contact_title">#272726</color>
+    <color name="color_authenticate_contact_bg">#F2F3F4</color>
+    <color name="color_authenticate_contact_radio">#E3E3E1</color>
+
+    <color name="color_authenticate_tip_background">#FFF7BD5F</color>
+    <color name="color_common_authenticate_kyc_line">#1A000003</color>
+
+    <!--认证模块    -->
+    <color name="auth_common_grey">#CCCCCC</color>
+    <color name="auth_common_edit_grey">#1a000000</color>
+    <color name="auth_liveness_grey">#ffe4e4e4</color>
+    <color name="auth_liveness_white">#ffffffff</color>
+    <color name="face_authenticate_bg">#FFF9F9F9</color>
+    <color name="relation_cancle_bg">#666</color>
+    <color name="relation_listview_bg">#F2F3F5</color>
+    <color name="take_selfie_text_bg">#de000000</color>
+    <color name="take_selfie_tip_bg">#ffcccccc</color>
+
+</resources>

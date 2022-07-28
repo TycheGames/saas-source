@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="15dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/iv_check_registration_item_head"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/radiohall_listitem_head_portrait_icon"/>
+
+            <TextView
+                android:id="@+id/tv_check_registration_item_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/sun_flower"
+                android:textColor="@color/color_666666"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/iv_check_registration_item_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/radiohall_listitem_gender_women_icon"/>
+
+            <ImageView
+                android:id="@+id/iv_check_registration_item_vip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/radiohall_listitem_certified_icon"/>
+
+            <TextView
+                android:id="@+id/tv_check_registration_item_creattime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="15dp"
+                android:text="2019/03/04   08:42 Sign up"
+                android:textColor="@color/color_9e9ea4"
+                android:textSize="11sp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp">
+
+            <ImageView
+                android:id="@+id/iv_check_registration_item_photo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="3dp"
+                android:src="@mipmap/check_registration_photo"/>
+
+            <LinearLayout
+                android:id="@+id/ll_yue_ta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_check_registration_state"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/check_registration_listitem_to_date"/>
+
+                <TextView
+                    android:id="@+id/tv_check_registration_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="约Ta"
+                    android:textColor="@color/color_3e3d3d"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

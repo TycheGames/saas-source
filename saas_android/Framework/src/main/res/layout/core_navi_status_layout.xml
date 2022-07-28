@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:context="com.bigshark.android.core.component.navigator.NavigationStatusLinearLayout">
+
+    <LinearLayout
+        android:id="@+id/common_navigation_status_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/common_navigation_status_toolBar_root"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+        <RelativeLayout
+            android:id="@+id/common_navigation_status_title_root"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/common_navigation_status_title_left_root"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp">
+
+                <ImageView
+                    android:id="@+id/common_navigation_status_title_left_image"
+                    style="@style/Text.Title_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/core_navi_back_icon" />
+
+                <TextView
+                    android:id="@+id/common_navigation_status_title_left_text"
+                    style="@style/Text.Title_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="back"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/common_navigation_status_title_cloose_image"
+                style="@style/Text.Title_Button"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/common_navigation_status_title_left_root"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/core_navi_close_icon" />
+
+            <TextView
+                android:id="@+id/common_navigation_status_title_title"
+                style="@style/Text.Title"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:text="title"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/common_navigation_status_title_right_root"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp">
+
+                <TextView
+                    android:id="@+id/common_navigation_status_title_right_text"
+                    style="@style/Text.Title_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="more"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/common_navigation_status_title_right_image"
+                    style="@style/Text.Title_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:scaleType="centerInside" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/common_navigation_status_title_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="3dp" />
+
+            <View
+                android:id="@+id/common_navigation_status_title_bottomLine"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_E0E0E0" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

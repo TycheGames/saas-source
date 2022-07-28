@@ -1,0 +1,43 @@
+<resources>
+
+    <!--
+    Base application theme, dependent on API level. This theme is replaced
+    by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+-->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!--<item name="android:windowAnimationStyle">@style/AnimationActivity</item>-->
+        <item name="windowNoTitle">true</item>
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/theme_color</item>
+        <!--状态栏颜色-->
+        <item name="colorPrimaryDark">@color/theme_color</item>
+        <!--控制各个控件被选中时的颜色-->
+        <item name="colorAccent">@color/theme_secondary_color</item>
+        <!--底部导航栏颜色 api：21-->
+        <!--<item name="android:navigationBarColor">@color/colorPrimary</item>-->
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="Dialog_NoTitle" parent="android:style/Theme.Dialog">
+        <!-- 设置自定义布局的背景透明 -->
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 设置window背景透明，也就是去边框 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+</resources>

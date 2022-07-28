@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/select_contact_relation_dialog_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_global_bg_white">
+
+    <TextView
+        android:id="@+id/authenticate_emergency_contact_select_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Select Relative Contact Person"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/select_contact_relation_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/authenticate_emergency_contact_select_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:divider="@null" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/select_contact_relation_listview"
+        android:background="@color/relation_listview_bg"
+        android:gravity="center|end"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/select_contact_relation_cancle"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:gravity="center|end"
+            android:text="Cancel"
+            android:textColor="@color/relation_cancle_bg"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/select_contact_relation_ok"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center|end"
+            android:text="Ok"
+            android:textColor="@color/theme_color"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</RelativeLayout>

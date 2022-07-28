@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="1dp">
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_homepage_photo_empty_img"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_photo_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_photo_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/shade_photo_red_envelope_thumbnail"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_photo_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="Red envelope photos burned immediately after reading"
+                android:textColor="@color/black"
+                android:textSize="11sp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

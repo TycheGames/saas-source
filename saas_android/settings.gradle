@@ -1,0 +1,13 @@
+include ':app', ':Framework'
+
+
+// 申请权限，上报数据
+include ':lib_permission', ':lib_permission_less', ':lib_permission_more'
+// sp存储
+include ':lib_sharedpreferences_extends', ':lib_sharedpreferences_proxy'
+// webview
+include ':lib_webview_x5', ':lib_webview_android'
+
+// df：活体与ekyc认证
+include ':DFLivenessLibrary'
+//include ':DFKYCLibrary'

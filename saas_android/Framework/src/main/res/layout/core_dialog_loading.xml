@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_framework_dialog_loading_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/core_loading_dialog_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/app_framework_dialog_loading_content"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:maxWidth="150dp"
+        android:text="安全加载中..."
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/app_framework_dialog_loading_load_view"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="15dp"
+        app:SpinKit_Color="#FFF"
+        app:SpinKit_Style="ThreeBounce" />
+
+</LinearLayout>

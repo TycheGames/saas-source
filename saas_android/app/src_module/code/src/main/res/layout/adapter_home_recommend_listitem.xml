@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp">
+
+        <ImageView
+            android:id="@+id/iv_item_head_portrait"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/home_listitem_head_portrait_icon"/>
+
+        <ImageView
+            android:id="@+id/iv_home_item_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="2dp"
+            android:src="@mipmap/home_listitem_vip_icon"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_home_item_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sun_flower"
+                android:textColor="@color/color_3e3d3d"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/iv_home_item_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/home_listitem_gender_men_icon"/>
+
+            <TextView
+                android:id="@+id/iv_home_item_age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="25"
+                android:textColor="@color/color_9e9ea4"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/iv_home_item_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/home_listitem_unlike_icon"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_home_item_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/home_listitem_textleft_location_icon"
+                android:drawablePadding="5dp"
+                android:text="上海市"
+                android:textColor="@color/color_9e9ea4"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:id="@+id/tv_home_item_career"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:drawableLeft="@mipmap/home_listitem_textleft_professional_icon"
+                android:drawablePadding="5dp"
+                android:text="IT"
+                android:textColor="@color/color_9e9ea4"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:id="@+id/tv_home_item_distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="60dp"
+                android:text="268m"
+                android:textColor="@color/color_666666"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tv_home_item_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="2 minutes ago"
+                android:textColor="@color/color_666666"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

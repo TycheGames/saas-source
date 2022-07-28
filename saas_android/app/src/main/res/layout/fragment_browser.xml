@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/common_webview_fragment_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bigshark.android.fragments.home.BrowserFragment">
+
+    <com.bigshark.android.core.component.navigator.NavigationStatusLinearLayout
+        android:id="@+id/common_browser_fragment_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:defult_style="WHITEBG_BLACKTEXT"
+        app:left_button_drawable="@drawable/core_navi_back_icon"
+        app:right_button_drawable="@drawable/view_refresh_black_icon" />
+
+    <RelativeLayout
+        android:id="@+id/common_browser_fragment_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.bigshark.android.common.browser.BrowserWebView
+            android:id="@+id/common_browser_fragment_xWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_fragment_credit_background_root"
+    android:layout_width="match_parent"
+    android:layout_height="304dp"
+    android:layout_centerHorizontal="true"
+    android:background="#ffffff"
+    tools:context="com.bigshark.android.fragments.home.MainFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="304dp"
+        android:src="@drawable/home_mainfragment_main_top_bg" />
+
+    <ImageView
+        android:id="@+id/main_fragment_credit_background_ImageView"
+        android:layout_width="345dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/fragment_main_card_bg" />
+
+    <ImageView
+        android:id="@+id/main_fragment_credit_high_demand_ImageView"
+        android:layout_width="74dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@id/main_fragment_credit_background_ImageView"
+        android:layout_marginTop="46dp"
+        android:src="@drawable/main_fragment_high_demand_icon" />
+
+</RelativeLayout>

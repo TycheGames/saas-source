@@ -1,0 +1,156 @@
+<LinearLayout android:id="@+id/authenticate_contact_optional_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:id="@+id/contact_activity_optional_title"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/color_common_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:background="@color/theme_color" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/contact_optional"
+            android:textColor="@color/color_common_text_tip"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contact_activity_facebook_root"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/color_common_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_facebook"
+            android:textColor="@color/color_common_text_tip"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/authenticate_contact_facebook_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_common_white"
+            android:gravity="center|end"
+            android:hint="@string/contact_input_tip"
+            android:textColor="@color/color_common_text_tip"
+            android:textColorHint="#ffadadad"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contact_activity_whats_app_root_blank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_common_white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/color_common_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contact_activity_whats_app_root"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/color_common_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_whats_app"
+            android:textColor="@color/color_common_text_tip"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/authenticate_contact_whats_app_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_common_white"
+            android:gravity="center|end"
+            android:hint="@string/contact_input_tip"
+            android:textColor="@color/color_common_text_tip"
+            android:textColorHint="#ffadadad"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contact_activity_skype_root_blank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_common_white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/color_common_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contact_activity_skype_root"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/color_common_white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_skype_account"
+            android:textColor="@color/color_common_text_tip"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/authenticate_contact_skype_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_common_white"
+            android:gravity="center|end"
+            android:hint="@string/contact_input_tip"
+            android:textColor="@color/color_common_text_tip"
+            android:textColorHint="#ffadadad"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</LinearLayout>

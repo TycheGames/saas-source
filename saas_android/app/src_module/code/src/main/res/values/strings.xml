@@ -1,0 +1,70 @@
+<resources>
+<!--    <string name="app_name">三更</string>-->
+    <string name="we_chat">Wechat</string>
+    <string name="qq">QQ</string>
+    <string name="dating_shows">Dating shows</string>
+    <string name="dating_range">Dating range:</string>
+    <string name="weight">weight</string>
+    <string name="bust">bust</string>
+    <string name="report_anonymous">Report anonymously</string>
+    <string name="submit">submit</string>
+    <string name="tips">If necessary, please specify (within 200 words)</string>
+    <string name="supplementary">Supplementary explanation (optional)</string>
+    <string name="report_appointment">Report this appointment</string>
+
+    <string name="change_pwd">Change Password</string>
+    <string name="pwd_tips_1">Please enter the current login password</string>
+    <string name="pwd_tips_2">Please set a new password of 6 to 16 digits</string>
+    <string name="confirm_changes">Confirm the changes</string>
+
+    <string name="sms_verification_code">SMS verification code</string>
+    <string name="get_verification_dode">Get Verification Code</string>
+    <string name="set_pwd_tip">Please set a 6 to 16-digit login password</string>
+    <string name="register_and_agree">Register and Agree</string>
+    <string name="complete">Complete</string>
+
+    <string name="feedback">Feedback</string>
+
+    <string name="private_chat_message_notification">Private chat message notification</string>
+    <string name="broadcast_notice">Broadcast Notice</string>
+    <string name="system_notification">System Notification</string>
+    <string name="evaluation_notice">Evaluation Notice</string>
+    <string name="earnings_remind">Earnings Remind</string>
+
+    <string name="my_broadcast_center">My Broadcast Center</string>
+    <string name="change_phone_number">Change Phone Number</string>
+    <string name="enter_new_phone_number">Please enter a new phone number</string>
+
+    <string name="confirm_replacement">Confirm Replacement</string>
+    <string name="registration_agreement">"SanGeng Registration Agreement"</string>
+    <string name="enter_a_nickname">Please enter a nickname</string>
+    <string name="search">Search</string>
+
+    <string name="burn_after_reading">Burn after reading</string>
+    <string name="view_on_screen">View on screen</string>
+    <string name="red_envelope_to_see_photos">Red envelope to see photos</string>
+    <string name="photo_burned">Photo burned</string>
+    <string name="after_certification_add_time">Extended viewing time up to 6 seconds after certification</string>
+    <string name="certified_now">Certified Now</string>
+    <string name="alipay">Alipay Pay</string>
+
+    <string name="sun_flower">Sun Flower</string>
+    <string name="eat_and_drink">eat and drink</string>
+    <string name="chat_and_eat">Chat and Eat</string>
+
+    <!-- session -->
+
+
+    <!--RTS白板-->
+
+    <!-- 云信SDK所需文案 -->
+
+    <!-- 多端在线类型 -->
+
+    <!-- 多端登录 -->
+
+    <!-- location -->
+
+    <!-- 阅后即焚 -->
+
+</resources>
