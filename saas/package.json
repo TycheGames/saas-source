@@ -1,0 +1,16 @@
+{
+  "name": "loan",
+  "dependencies": {
+    "popper.js": "^1.14.7",
+    "bootstrap": "^4.3.1",
+    "inputmask": "^4.0.8",
+    "jquery": "^3.4.1",
+    "jquery-treegrid": "^0.3.0",
+    "jquery-ui": "^1.12.1",
+    "punycode": "^2.1.1",
+    "typeahead.js": "^0.11.1",
+    "yii2-pjax": "^2.0.7"
+  },
+  "devDependencies": {},
+  "license": "BSD-3-Clause"
+}
