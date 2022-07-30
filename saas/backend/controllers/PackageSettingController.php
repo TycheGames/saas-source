@@ -144,8 +144,8 @@ class PackageSettingController extends BaseController
      */
     private function getCreditAccountId() : array
     {
-        $oPayAccountSetting = new PayAccountSetting();
-        $arrCreditAccountId = $oPayAccountSetting->getAccountList($this->merchantIds, $oPayAccountSetting::SERVICE_TYPE_KUDOS_CREDIT);
+        // $oPayAccountSetting = new PayAccountSetting();
+        $arrCreditAccountId = PayAccountSetting::getAccountList($this->merchantIds, PayAccountSetting::SERVICE_TYPE_KUDOS_CREDIT);
 
         if (!empty($arrCreditAccountId)) {
             return $arrCreditAccountId;

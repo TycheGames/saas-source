@@ -121,7 +121,7 @@ class PayAccountSetting extends ActiveRecord
      * @param $serviceType
      * @return array
      */
-    public function getAccountList($merchantId, $serviceType)
+    public static function getAccountList($merchantId, $serviceType)
     {
         $list = [];
         $query = self::find()->select(['id', 'name', 'merchant_id'])->where(['service_type' => $serviceType])->orderBy(['merchant_id' => SORT_DESC]);
