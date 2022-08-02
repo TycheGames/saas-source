@@ -16,6 +16,7 @@
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "clipboard-polyfill": "2.8.6",
+    "cross-env": "^7.0.3",
     "css-loader": "1.0.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
@@ -69,9 +70,9 @@
     "workbox-webpack-plugin": "3.6.3"
   },
   "scripts": {
-    "start": "REQUEST_ENV=development node scripts/start.js",
-    "build": "REQUEST_ENV=production node scripts/build.js",
-    "build-test": "REQUEST_ENV=test node scripts/build.js",
+    "start": "cross-env REQUEST_ENV=development node scripts/start.js",
+    "build": "cross-env REQUEST_ENV=production node scripts/build.js",
+    "build-test": "cross-env REQUEST_ENV=test node scripts/build.js",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
