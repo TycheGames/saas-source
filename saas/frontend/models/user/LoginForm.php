@@ -26,8 +26,8 @@ class LoginForm extends BaseForm
         return [
             [['phone','password'], 'required'],
             [['phone','password'], 'trim'],
-            ['phone', 'verifyPhone'],
-            ['password', 'string', 'min' => 6, 'max' => 20],
+//            ['phone', 'verifyPhone'],
+//            ['password', 'string', 'min' => 6, 'max' => 20],
             [['clientInfo', 'packageName'],  'safe']
         ];
     }

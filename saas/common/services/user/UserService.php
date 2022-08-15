@@ -91,10 +91,10 @@ class UserService extends BaseService
             return false;
         }
 
-        if (!Util::verifyPhone($form->phone)) {
-            $this->setError('please enter the correct phone number');
-            return false;
-        }
+//        if (!Util::verifyPhone($form->phone)) {
+//            $this->setError('please enter the correct phone number');
+//            return false;
+//        }
 
         if (!self::lockUserRegisterRecord($form->phone)) {
             $this->setError('please try again later');
@@ -123,6 +123,7 @@ class UserService extends BaseService
             $user->merchant_id = $merchantId;
             $user->source_id = $sourceId;
             $user->phone = $form->phone;
+            $user->name = $form->phone;
             $user->status = LoanPerson::PERSON_STATUS_PASS;
             $user->type = $type;
             $user->created_ip = $form->clientInfo['ip'];
@@ -245,10 +246,10 @@ class UserService extends BaseService
         }
         // 密码登录
         $login_type = UserLoginLog::TYPE_CAPTCHA;
-        if(!$this->validateLoginCaptcha($validateModel->phone, $validateModel->code, $sourceId)){
-            $this->setError('please enter the correct phone and otp');
-            return false;
-        }
+//        if(!$this->validateLoginCaptcha($validateModel->phone, $validateModel->code, $sourceId)){
+//            $this->setError('please enter the correct phone and otp');
+//            return false;
+//        }
 
         return $this->login($user, $login_type, $validateModel->clientInfo);
     }
@@ -276,12 +277,13 @@ class UserService extends BaseService
                 yii::error($params,'login');
             }
             ClientInfoLog::addLog($user->id, ClientInfoLog::EVENT_LOGIN, $loginLog->id, $params);
-
             $data = [
                 'username' => $user->phone,
                 'sessionid' => Yii::$app->session->getId(),
+                'userId' => $user->id
             ];
             $this->setResult($data);
+
             return true;
         } else {
             $this->setError('server is too busy');

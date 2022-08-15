@@ -150,12 +150,12 @@ class UserController extends BaseController
             $form->clientInfo = $this->getClientInfo();
             $form->packageName = $this->packageName();
 
-            if (!$this->userService->validateRegCaptcha($form)) {
-                return $this->return->returnFailed(
-                    ErrorCode::ERROR_COMMON(),
-                    'Please enter the correct otp code'
-                );
-            }
+//            if (!$this->userService->validateRegCaptcha($form)) {
+//                return $this->return->returnFailed(
+//                    ErrorCode::ERROR_COMMON(),
+//                    'Please enter the correct otp code'
+//                );
+//            }
 
             if ($user = $this->userService->registerByPhone($form)) {
                 $this->userService->login($user, UserLoginLog::TYPE_NORMAL, $form->clientInfo);
@@ -195,11 +195,11 @@ class UserController extends BaseController
             $form->clientInfo = $this->getClientInfo();
             $form->packageName = $this->packageName();
             if ($this->userService->loginByPhone($form)) {
-                $check = LoanService::haveOpeningOrderNoExport(Yii::$app->user->id);
-                if (!$check) {
-                    Yii::$app->user->logout();
-                    return $this->return->returnFailed(ErrorCode::ERROR_COMMON());
-                }
+//                $check = LoanService::haveOpeningOrderNoExport(Yii::$app->user->id);
+//                if (!$check) {
+//                    Yii::$app->user->logout();
+//                    return $this->return->returnFailed(ErrorCode::ERROR_COMMON());
+//                }
                 return $this->return->setData($this->userService->getResult())->returnOK();
             } else {
                 return $this->return->returnFailed(
@@ -1100,11 +1100,11 @@ class UserController extends BaseController
             $validateModel->packageName = $this->packageName();
             $validateModel->clientInfo = $this->getClientInfo();
             if ($this->userService->loginByCaptcha($validateModel)) {
-                $check = LoanService::haveOpeningOrderNoExport(Yii::$app->user->id);
-                if (!$check) {
-                    Yii::$app->user->logout();
-                    return $this->return->returnFailed(ErrorCode::ERROR_COMMON());
-                }
+//                $check = LoanService::haveOpeningOrderNoExport(Yii::$app->user->id);
+//                if (!$check) {
+//                    Yii::$app->user->logout();
+//                    return $this->return->returnFailed(ErrorCode::ERROR_COMMON());
+//                }
                 return $this->return->setData($this->userService->getResult())->returnOK();
             } else {
                 return $this->return

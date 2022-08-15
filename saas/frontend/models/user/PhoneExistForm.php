@@ -32,7 +32,7 @@ class PhoneExistForm extends BaseForm
             ['phone', 'required'],
             //对表单项进行去掉首尾空格的处理
             ['phone', 'trim'],
-            ['phone', 'validatePhone'],
+//            ['phone', 'validatePhone'],
             [['packageName'], 'safe']
         ];
     }

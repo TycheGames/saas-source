@@ -59,14 +59,14 @@ class UserContactForm extends BaseForm
             ['relativeContactPerson', 'in', 'range' => array_values(Relative::toArray()), 'message' => 'Error emergency relationship'],
             ['otherRelativeContactPerson', 'in', 'range' => array_values(Relative::toArray()), 'message' => 'Error other relationship'],
             //手机号检测
-            ['phone', 'validatePhone', 'skipOnEmpty' => false, 'skipOnError' => true, 'params' => [
-                'errorMsg1' => 'Do Not Choose Yourself',
-                'errorMsg2' => 'Emergency contact must include a mobile number',
-            ]],
-            ['otherPhone', 'validatePhone', 'skipOnEmpty' => false, 'skipOnError' => true, 'params' => [
-                'errorMsg1' => 'Do Not Choose Yourself',
-                'errorMsg2' => 'Other contact must include a mobile number',
-            ]],
+            // ['phone', 'validatePhone', 'skipOnEmpty' => false, 'skipOnError' => true, 'params' => [
+            //     'errorMsg1' => 'Do Not Choose Yourself',
+            //     'errorMsg2' => 'Emergency contact must include a mobile number',
+            // ]],
+            // ['otherPhone', 'validatePhone', 'skipOnEmpty' => false, 'skipOnError' => true, 'params' => [
+            //     'errorMsg1' => 'Do Not Choose Yourself',
+            //     'errorMsg2' => 'Other contact must include a mobile number',
+            // ]],
             ['phone', 'validateSame', 'skipOnEmpty' => false, 'skipOnError' => true, 'params' => ['attribute' => 'otherPhone']],
         ];
     }

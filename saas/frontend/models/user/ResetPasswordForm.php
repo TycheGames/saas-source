@@ -28,9 +28,9 @@ class ResetPasswordForm extends BaseForm
         return [
             [['phone','password','code'], 'required'],
             [['phone','password','code'], 'trim'],
-            ['phone', 'verifyPhone'],
+            // ['phone', 'verifyPhone'],
             ['password', 'string', 'min' => 6, 'max' => 20],
-            ['code', 'string', 'length' => 6],
+            // ['code', 'string', 'length' => 6],
             [['packageName'], 'safe']
         ];
     }

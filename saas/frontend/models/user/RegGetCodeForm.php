@@ -27,7 +27,7 @@ class RegGetCodeForm extends BaseForm
         return [
             ['phone', 'required'],
             ['phone', 'trim'],
-            ['phone', 'validatePhone'],
+            // ['phone', 'validatePhone'],
             [['sourceId', 'packageName'], 'safe']
         ];
     }

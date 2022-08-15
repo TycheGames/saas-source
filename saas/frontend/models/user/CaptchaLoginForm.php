@@ -33,7 +33,7 @@ class CaptchaLoginForm extends BaseForm
             [['phone','code'], 'required'],
             //对表单项进行去掉首尾空格的处理
             [['phone','code'], 'trim'],
-            ['phone', 'validatePhone'],
+//            ['phone', 'validatePhone'],
             [['packageName', 'clientInfo'], 'safe']
         ];
     }

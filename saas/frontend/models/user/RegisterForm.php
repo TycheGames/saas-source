@@ -38,9 +38,9 @@ class RegisterForm extends BaseForm
         return [
             [['phone','password','code'], 'required'],
             [['phone','password','code'], 'trim'],
-            ['phone', 'validatePhone'],
-            ['password', 'string', 'min' => 6, 'max' => 20],
-            ['code', 'string', 'length' => 6],
+//            ['phone', 'validatePhone'],
+//            ['password', 'string', 'min' => 6, 'max' => 20],
+//            ['code', 'string', 'length' => 6],
             [['afStatus', 'mediaSource', 'clickTime', 'installTim', 'appsFlyerUID', 'clientInfo', 'packageName', 'conversionData'],'safe']
         ];
     }

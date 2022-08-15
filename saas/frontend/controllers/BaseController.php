@@ -40,13 +40,13 @@ abstract class BaseController extends Controller
             Yii::$app->getResponse()->format = Response::FORMAT_JSONP;
             $this->isApiDocumentRequest = true;
         }
-        if (!Yii::$app->user->isGuest) {
-            $check = LoanService::haveOpeningOrderNoExport(Yii::$app->user->id);
-            if (!$check) {
-                Yii::$app->user->logout();
-                return $this->return->returnFailed(ErrorCode::NOT_LOGGED());
-            }
-        }
+        // if (!Yii::$app->user->isGuest) {
+        //     $check = LoanService::haveOpeningOrderNoExport(Yii::$app->user->id);
+        //     if (!$check) {
+        //         Yii::$app->user->logout();
+        //         return $this->return->returnFailed(ErrorCode::NOT_LOGGED());
+        //     }
+        // }
 	}
 	
 
@@ -68,7 +68,7 @@ abstract class BaseController extends Controller
             $sql_time = number_format($sql_time_temp * 1000) . 'ms';
             $result['debug_info'] = [
                 'sql_count' => strval($sql_count),
-                'sql_time' => $sql_time,
+                'sql_time' => $sql_time
             ];
 
         }
