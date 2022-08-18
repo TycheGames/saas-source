@@ -34,7 +34,7 @@ class UserBankAccountForm extends BaseForm
             [['account', 'ifsc'], 'required'],
             [['account', 'ifsc'], 'trim'],
             [['clientInfo', 'userId', 'name'], 'safe'],
-            ['ifsc', 'validateIfsc', 'skipOnEmpty' => false, 'skipOnError' => true],
+            // ['ifsc', 'validateIfsc', 'skipOnEmpty' => false, 'skipOnError' => true],
         ];
     }
 

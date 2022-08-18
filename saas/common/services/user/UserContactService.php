@@ -34,9 +34,9 @@ class UserContactService extends BaseService implements IThirdDataService
      */
     public function saveUserContactByForm(UserContactForm $userContractForm, int $userID): bool
     {
-        if (empty($userContractForm) || !$userContractForm->validate()) {
-            return false;
-        }
+        // if (empty($userContractForm) || !$userContractForm->validate()) {
+        //     return false;
+        // }
 
         $user = LoanPerson::findById($userID);
         if (empty($user)) {

@@ -254,6 +254,17 @@ class UserAddressService extends BaseService implements IThirdDataService
 
     private function saveUserAadhaar(int $userID, UserAddressProofReportForm $addressProofForm): bool
     {
+        $user = LoanPerson::findById($userID);
+        $resUser = LoanPerson::findById($userID);
+        $resVerify = $user->userVerification->verificationUpdate(UserVerification::TYPE_OCR_AADHAAR, UserVerificationLog::STATUS_VERIFY_SUCCESS);
+        return $resUser && $resVerify;
+
+
+
+
+
+
+
         /**
          * @var UserCreditReportOcrAad $aadReport
          */

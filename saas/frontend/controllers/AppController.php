@@ -50,7 +50,13 @@ class  AppController extends BaseController
      * @method get
      *
      */
-    public function actionHome(){}
+    public function actionHome(){
+        $res=[
+            'page' => "home"
+        ];
+
+        return $this->return->setData($res)->returnOK();
+    }
 
     /**
      * 下发配置
@@ -84,10 +90,10 @@ class  AppController extends BaseController
         }
 
         $shareCookieDomain = [$domain];
-        if(in_array($domain, array_keys(yii::$app->params['domainMap'])))
-        {
-            $shareCookieDomain[] = yii::$app->params['domainMap'][$domain];
-        }
+//        if(in_array($domain, array_keys(yii::$app->params['domainMap'])))
+//        {
+//            $shareCookieDomain[] = yii::$app->params['domainMap'][$domain];
+//        }
 
         //用于做马甲包混淆，确保每个包的后端请求地址是不同的
         $prefixCode = $this->packageName();

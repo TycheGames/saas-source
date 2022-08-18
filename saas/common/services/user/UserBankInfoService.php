@@ -63,6 +63,48 @@ class UserBankInfoService extends BaseService implements IThirdDataService
      */
     public function asyncSaveBankInfo(UserBankAccountForm $form): bool
     {
+        $loanPerson = LoanPerson::findById($form->userId);
+        $sourceId = $loanPerson->source_id;
+
+        $bankAccountLog = new UserBankAccountLog();
+        $bankAccountLog->user_id = $form->userId;
+        $bankAccountLog->account = $form->account;
+        $bankAccountLog->ifsc = $form->ifsc;
+        $bankAccountLog->name = $form->name;
+        $bankAccountLog->status = UserBankAccountLog::STATUS_SUCCESS;
+        $bankAccountLog->save();
+
+        $userBankAccount = new UserBankAccount();
+        $userBankAccount->user_id = $form->userId;
+        $userBankAccount->source_id = $sourceId;
+        $userBankAccount->source_type = 'source_type';
+        $userBankAccount->name = $form->name;
+        $userBankAccount->account = $form->account;
+        $userBankAccount->ifsc = 'ifsc';
+        $userBankAccount->main_card = UserBankAccount::MAIN_IS;
+        $userBankAccount->status = UserBankAccount::STATUS_UNVERIFIED;
+        $userBankAccount->report_account_name = 'report_account_name';
+        $userBankAccount->service_account_name = 'service_account_name';
+        $userBankAccount->bank_name = 'bank_name';
+        $userBankAccount->data = 'data';
+        $userBankAccount->client_info = json_encode($form->clientInfo,JSON_UNESCAPED_UNICODE);
+        $userBankAccount->merchant_id = $loanPerson->merchant_id;
+        $userBankAccount->save();
+
+        $this->setResult([
+            'id' => CommonHelper::idEncryption($bankAccountLog->id),
+        ]);
+        return true;
+
+
+
+
+
+
+        
+
+
+
         if (strpos($form->ifsc, ' ') !== false || strpos($form->account, ' ') !== false) {
             $this->setError('IFSC Code or Bank Account Number error');
             return false;

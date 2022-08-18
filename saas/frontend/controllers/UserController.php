@@ -417,8 +417,8 @@ class UserController extends BaseController
      */
     public function actionSaveBankAccount()
     {
-        return $this->return->returnFailed(ErrorCode::ERROR_COMMON(),
-            'system busy');
+        // return $this->return->returnFailed(ErrorCode::ERROR_COMMON(),
+        //     'system busy');
         $form = new UserBankAccountForm();
         $user = UserRegisterInfo::findOne(['user_id' => Yii::$app->user->id]);
         if ($form->load(Yii::$app->request->post(), '') && $form->validate()) {
@@ -543,6 +543,24 @@ class UserController extends BaseController
      */
     public function actionSaveUserContact(): array
     {
+        $service = new UserContactService();
+        $validateModel = new UserContactForm();
+        $service->saveUserContactByForm($validateModel, Yii::$app->user->id);
+        $verificationService = new UserVerificationService(Yii::$app->user->id);
+        $clientInfo = $this->getClientInfo();
+        $data = $verificationService->getNextVerificationItemPath(
+            VerificationItem::CONTACT(),
+            Yii::$app->request->hostInfo,
+            $clientInfo
+        );
+        return $this->return->setData($data)->returnOK();
+
+
+
+
+
+
+
         $verificationService = new UserVerificationService(Yii::$app->user->id);
         $beforeItemStatus = $verificationService->checkBeforeVerificationItem(VerificationItem::CONTACT());
         if(!$beforeItemStatus) {
@@ -867,8 +885,25 @@ class UserController extends BaseController
      */
     public function actionSaveUserKyc(): array
     {
-        return $this->return->returnFailed(ErrorCode::ERROR_COMMON(),
-            'system busy');
+        $service = new UserKYCService();
+        $validateModel = new UserKycForm();
+        $service->saveUserKycByForm($validateModel, Yii::$app->user->id);
+        $clientInfo = $this->getClientInfo();
+        $verificationService = new UserVerificationService(Yii::$app->user->id);
+        //认证状态为成功
+        $data = $verificationService->getNextVerificationItemPath(
+            VerificationItem::IDENTITY(),
+            Yii::$app->request->hostInfo,
+            $clientInfo
+        );
+        return $this->return->setData($data)->returnOK();
+
+
+
+
+
+
+        
         $clientInfo = $this->getClientInfo();
         $verificationService = new UserVerificationService(Yii::$app->user->id);
         $beforeItemStatus = $verificationService->checkBeforeVerificationItem(VerificationItem::IDENTITY());
@@ -979,6 +1014,23 @@ class UserController extends BaseController
      */
     public function actionSaveAddressProofReport(): array
     {
+        $clientInfo = $this->getClientInfo();
+        $verificationService = new UserVerificationService(Yii::$app->user->id);
+        $service = new UserAddressService();
+        $validateModel = new UserAddressProofReportForm();
+        $validateModel->addressProofType=AddressProofType::AADHAAR()->getValue();
+        $service->saveUserAddressProof($validateModel, Yii::$app->user->id);
+        //认证状态为成功
+        $data = $verificationService->getNextVerificationItemPath(
+            VerificationItem::ADDRESS(),
+            Yii::$app->request->hostInfo,
+            $clientInfo
+        );
+        return $this->return->setData($data)->returnOK();
+
+
+
+
         return $this->return->returnFailed(ErrorCode::ERROR_COMMON(),
             'system busy');
         $clientInfo = $this->getClientInfo();
