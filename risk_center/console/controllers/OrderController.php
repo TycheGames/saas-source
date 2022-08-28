@@ -88,7 +88,13 @@ class OrderController extends BaseController {
                 $data = new RiskDataDemoService($orderData);
                 $riskTree = new RiskTreeService($data);
                 /** @var array $result */
-                $result = $riskTree->exploreNodeValue($tree);
+                // $result = $riskTree->exploreNodeValue($tree);
+
+                //跳过逻辑
+                $result =[
+                    'result' => 'manual'
+                ];
+
                 //添加快照
                 $res_risk = $riskTree->insertRiskResultSnapshotToDb($riskOrder->order_id, $riskOrder->user_id, $riskOrder->app_name, $tree, $result);
                 switch ($result['result'])

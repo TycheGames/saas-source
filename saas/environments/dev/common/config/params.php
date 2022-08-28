@@ -105,7 +105,7 @@ $params['loan'] = [
 ];
 
 $params['RiskCenter'] = [
-    'base_url' => '',
+    'base_url' => 'http://103.174.50.22:8092/',
 ];
 
 $params['reCaptcha'] = [

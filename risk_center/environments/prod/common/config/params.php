@@ -46,7 +46,7 @@ $params['ExportRisk'] = [
         'token'    => 'xxxxxxxxxxxx'
     ],
     'saas' => [
-        'base_url' => 'http://internal-notify.smallflyelephantsaas.com/',
+        'base_url' => 'http://103.174.50.22:8082/',
         'token'    => 'xxxxxxxxxxxx'
     ],
 ];
@@ -58,8 +58,8 @@ $params['googleMap'] = [
 ];
 
 $params['reCaptcha'] = [
-    'secret' => 'xxxxxxxxxxxx1',
-    'webSecret' => 'xxxxxxxxxxxx2',
+    'secret' => '6LeW6lghAAAAAAztmS4wC4d_T2IpJPNdwD3mSVT7',
+    'webSecret' => '6LeW6lghAAAAAJv9LKrsQmnn3I9H_VJM4MR6IPpG',
     'uri' => 'https://www.google.com',
     'uriCn' => 'https://www.recaptcha.net'
 ];

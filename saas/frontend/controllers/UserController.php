@@ -543,17 +543,17 @@ class UserController extends BaseController
      */
     public function actionSaveUserContact(): array
     {
-        $service = new UserContactService();
-        $validateModel = new UserContactForm();
-        $service->saveUserContactByForm($validateModel, Yii::$app->user->id);
-        $verificationService = new UserVerificationService(Yii::$app->user->id);
-        $clientInfo = $this->getClientInfo();
-        $data = $verificationService->getNextVerificationItemPath(
-            VerificationItem::CONTACT(),
-            Yii::$app->request->hostInfo,
-            $clientInfo
-        );
-        return $this->return->setData($data)->returnOK();
+        // $service = new UserContactService();
+        // $validateModel = new UserContactForm();
+        // $service->saveUserContactByForm($validateModel, Yii::$app->user->id);
+        // $verificationService = new UserVerificationService(Yii::$app->user->id);
+        // $clientInfo = $this->getClientInfo();
+        // $data = $verificationService->getNextVerificationItemPath(
+        //     VerificationItem::CONTACT(),
+        //     Yii::$app->request->hostInfo,
+        //     $clientInfo
+        // );
+        // return $this->return->setData($data)->returnOK();
 
 
 

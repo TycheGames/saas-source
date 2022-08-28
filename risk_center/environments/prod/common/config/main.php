@@ -1,21 +1,24 @@
 <?php
 
-$_db_1 = 'riskcenter.cmsej672thg7.ap-south-1.rds.amazonaws.com';
-$_db_2 = 'riskcenter.cmsej672thg7.ap-south-1.rds.amazonaws.com';
-$_db_user = 'admin';
-$_db_pwd = '1htyuqtp7e92BN9k';
+$_db_1 = '103.174.50.24';
+$_db_2 = '103.174.50.24';
+$_db_user = 'root';
+$_db_pwd = 'smfin!@2022';
 
-$_redis_host = 'riskcenter.42uj5s.ng.0001.aps1.cache.amazonaws.com';
+$_redis_host = '103.174.50.22';
+$_redis_pwd = 'smfin_redis!@2022';
 
-$_mongo_1 = 'risk-center.cluster-cmsej672thg7.ap-south-1.docdb.amazonaws.com:27017';
+$_mongo_1 = '103.174.50.24:27017';
 $_mongo_read = 'docdb-2020-08-06-11-57-20.cmsej672thg7.ap-south-1.docdb.amazonaws.com:27017';
 $_mongo_user = 'root';
-$_mongo_pwd = '2RLDx1Bdy6uk1QoO';
+$_mongo_pwd = 'smfin_mongodb_2022';
 
-$_es_host = 'vpc-riskcenter-yghd2y4isdpyakqzp6no7c6474.ap-south-1.es.amazonaws.com';
+$_es_host = '103.174.50.22:9200';
+$_es_user = 'elastic';
+$_es_pwd = 'smfin_elastic!@2022';
 
-$_redis_alert_host = 'r-a2dmw1z7n1qz5f335bpd.redis.ap-south-1.rds.aliyuncs.com';
-$_redis_alert_pwd = 'cZKBWs227uVznQKy';
+$_redis_alert_host = '103.174.50.22';
+$_redis_alert_pwd = 'smfin_redis!@2022';
 
 return [
     'components' => [
@@ -53,9 +56,9 @@ return [
         'redis' => [
             'class' => 'yii\redis\Connection',
             'hostname' => $_redis_host,
+            'password' => $_redis_pwd,
             'port' => 6379,
-            'database' => 2,
-//            'password' => $_redis_pwd,
+            'database' => 14,
         ],
 
         'redis_alert' => [
@@ -63,7 +66,7 @@ return [
             'hostname' => $_redis_alert_host,
             'password' => $_redis_alert_pwd,
             'port' => 6379,
-            'database' => 1,
+            'database' => 14,
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -83,6 +86,7 @@ return [
             'nodes' => [
                 [
                     'http_address' => $_es_host,
+                    'auth'         => ['username' => $_es_user, 'password' => $_es_pwd],
                 ],
             ],
         ],

@@ -105,12 +105,12 @@ $params['loan'] = [
 ];
 
 $params['RiskCenter'] = [
-    'base_url' => '',
+    'base_url' => 'http://103.174.50.22:8092/',
 ];
 
 $params['reCaptcha'] = [
-    'secret' => 'xxxx',
-    'webSecret' => 'xxxx',
+    'secret' => '6LeW6lghAAAAAAztmS4wC4d_T2IpJPNdwD3mSVT7',
+    'webSecret' => '6LeW6lghAAAAAJv9LKrsQmnn3I9H_VJM4MR6IPpG',
     'uri' => 'https://www.recaptcha.net',
     'uriCn' => 'https://www.recaptcha.net'
 ];

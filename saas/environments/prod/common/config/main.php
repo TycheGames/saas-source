@@ -1,33 +1,34 @@
 <?php
 
-$_db_1 = 'xxxx';
-$_db_2 = 'xxx';
-$_db_user = 'admin';
-$_db_pwd = 'xxxx';
+$_db_1 = '103.174.50.24';
+$_db_2 = '103.174.50.24';
+$_db_user = 'root';
+$_db_pwd = 'smfin!@2022';
 
-$_redis_host = 'xxxx';
+$_redis_host = '103.174.50.22';
+$_redis_pwd = 'smfin_redis!@2022';
 
-$_mongo_1 = 'xxxx:27017';
+$_mongo_1 = '103.174.50.22:27017';
 $_mongo_2 = 'xxxx:3717';
 $_mongo_user = 'root';
-$_mongo_pwd = 'xxxx';
+$_mongo_pwd = 'smfin_mongodb_2022';
 
 
 
 ####################### loan项目 #############################################
-$_db_loan = 'xxxx';
-$_db_loan_user = 'admin';
-$_db_loan_pwd = 'xxxx';
+$_db_loan = '103.174.50.24';
+$_db_loan_user = 'root';
+$_db_loan_pwd = 'smfin!@2022';
 
-$_mongo_loan = 'xxxx:27017';
+$_mongo_loan = '103.174.50.22:27017';
 $_mongo_loan_user = 'root';
-$_mongo_loan_pwd = 'xxxx';
+$_mongo_loan_pwd = 'smfin_mongodb_2022';
 
 ###################### assist_center项目 #####################################
-$_redis_host_assist_center = 'xxxx';
+$_redis_host_assist_center = '103.174.50.22';
 
-$_redis_alert_host = 'xxxx';
-$_redis_alert_pwd = 'xxxx';
+$_redis_alert_host = '103.174.50.24';
+$_redis_alert_pwd = 'smfin_redis!@2022';
 
 return [
     'components' => [
@@ -159,12 +160,14 @@ return [
         'redis' => [
             'class' => 'yii\redis\Connection',
             'hostname' => $_redis_host,
+            'password' => $_redis_pwd,
             'port' => 6379,
             'database' => 1,
         ],
         'redis_assist_center' => [
             'class'    => 'yii\redis\Connection',
             'hostname' => $_redis_host_assist_center,
+            'password' => $_redis_pwd,
             'port'     => 6379,
             'database' => 2,
         ],
